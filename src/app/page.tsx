@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeaderBar from "./Components/HeaderBar/HeaderBar";
+import HeaderBar from "./user.InterfaceLayer/Components/HeaderBar/HeaderBar";
 
 export default function Home() {
   return (
