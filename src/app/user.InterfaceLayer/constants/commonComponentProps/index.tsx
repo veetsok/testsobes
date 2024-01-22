@@ -24,6 +24,8 @@ export enum CommonComponentsProps {
   isLoading = "isLoading",
   key = "key",
   left = "left",
+  fontSize = "fontSize",
+  fontWeight = "fontWeight",
   margin = "margin",
   max = "max",
   maxLength = "maxLength",
@@ -65,6 +67,8 @@ export interface ICommonComponentProps {
   [CommonComponentsProps.isLoading]?: boolean;
   [CommonComponentsProps.key]?: number;
   [CommonComponentsProps.left]?: string;
+  [CommonComponentsProps.fontSize]?: string;
+  [CommonComponentsProps.fontWeight]?: string;
   [CommonComponentsProps.margin]?: string;
   [CommonComponentsProps.max]?: number;
   [CommonComponentsProps.maxLength]?: number;

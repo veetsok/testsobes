@@ -13,23 +13,31 @@ export const Box = styled.div`
   justify-content: space-between;
 `;
 
-export const MenuTopLeft = styled.div`
+export const Left = styled.div`
   display: flex;
   align-items: center;
 `;
 
-export const MenuTopListItem = styled.div`
+export const ListItem = styled.div`
   display: flex;
   margin-right: 30px;
 `;
 
-export const MenuTopItem = styled.div``;
-
-export const MenuTopSocial = styled.div`
+export const Social = styled.div`
   display: flex;
   align-items: center;
 `;
 
 export const MenuTopRight = styled.div``;
+
+export const A = styled.a`
+  color: var(--Gray-600, #5d6c7b);
+  /* 12 px (regular) */
+  font-family: Jost;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+`;
 
 // export const MenuTopLeft = styled.div``

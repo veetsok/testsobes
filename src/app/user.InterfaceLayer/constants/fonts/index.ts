@@ -1,5 +1,5 @@
 enum FontsEnum {
-  Roboto = "Roboto-Regular",
+  Jost = "Jost",
 }
 
 export default FontsEnum;
