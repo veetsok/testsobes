@@ -79,7 +79,7 @@ const MenuTop: React.FC<MenuTopProps> = () => {
               type={ImageEnum.enum_defaultSvg}
               icon={<Plus />}
               border={`1px solid ${Colors.GRAY}`}
-              borderRadius="20px"
+              $borderRadius="20px"
               padding="4px"
             />
           </ST.MenuTopRight>

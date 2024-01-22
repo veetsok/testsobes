@@ -14,7 +14,7 @@ export interface ImageType extends ICommonComponentProps, ImageStyleProps {
 export interface ImageStyleProps {
   isLoading?: ICommonComponentProps["isLoading"];
   background?: ICommonComponentProps["background"];
-  borderRadius?: ICommonComponentProps["borderRadius"];
+  $borderRadius?: ICommonComponentProps["borderRadius"];
   border?: ICommonComponentProps["border"];
   height?: ICommonComponentProps["height"];
   width?: ICommonComponentProps["width"];

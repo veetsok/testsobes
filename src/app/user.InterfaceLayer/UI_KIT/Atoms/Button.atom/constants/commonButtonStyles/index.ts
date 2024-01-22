@@ -13,6 +13,6 @@ export const commonButtonStyles = css<ButtonStyleProps>`
   width: ${(props) => (props.width ? props.width : "auto")};
   padding: ${(props) => (props.padding ? props.padding : "14px 0")};
   border: ${(props) => props.border};
-  border-radius: ${(props) => props.borderRadius};
+  border-radius: ${(props) => props.$borderRadius};
   color: ${(props) => props.color};
 `;

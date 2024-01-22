@@ -8,7 +8,7 @@ export const commonImageStyles = css<ImageStyleProps>`
   justify-content: center;
   background: ${(props) =>
     props.background ? `#fff 50% / contain no-repeat url(${props.background})` : "none"};
-  border-radius: ${(props) => props.borderRadius};
+  border-radius: ${(props) => props.$borderRadius};
   border: ${(props) => props.border};
   margin: ${(props) => props.margin};
   height: ${(props) => props.height};

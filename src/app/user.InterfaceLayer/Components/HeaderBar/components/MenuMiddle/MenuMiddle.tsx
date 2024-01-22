@@ -27,7 +27,7 @@ const MenuMiddle: React.FC<MenuMiddleProps> = () => {
 
           <ButtonAtom
             padding="8px 18px 9px 15px"
-            borderRadius="5px"
+            $borderRadius="5px"
             border={`1.5px solid ${Colors.PURPLE}`}
             background={Colors.PURPLE}
             type={ButtonEnum.enum_defaultButton}
