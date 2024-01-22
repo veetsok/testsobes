@@ -18,6 +18,7 @@ export enum CommonComponentsProps {
   cursor = "cursor",
   disabled = "disabled",
   fill = "fill",
+  stroke = "stroke",
   height = "height",
   icon = "icon",
   isError = "isError",
@@ -61,6 +62,7 @@ export interface ICommonComponentProps {
   [CommonComponentsProps.cursor]?: string;
   [CommonComponentsProps.disabled]?: boolean;
   [CommonComponentsProps.fill]?: string;
+  [CommonComponentsProps.stroke]?: string;
   [CommonComponentsProps.height]?: string;
   [CommonComponentsProps.icon]?: JSX.Element | ReactNode;
   [CommonComponentsProps.isError]?: boolean;

@@ -20,7 +20,8 @@ export interface ImageStyleProps {
   width?: ICommonComponentProps["width"];
   margin?: ICommonComponentProps["margin"];
   padding?: ICommonComponentProps["padding"];
-  fill?: ICommonComponentProps["margin"];
+  fill?: ICommonComponentProps["fill"];
+  stroke?: ICommonComponentProps["stroke"];
   cursor?: ICommonComponentProps["cursor"];
   position?: ICommonComponentProps["position"];
   top?: ICommonComponentProps["top"];

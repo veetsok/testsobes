@@ -67,7 +67,8 @@ const MenuMiddle: React.FC<MenuMiddleProps> = () => {
               <ImageAtom
                 type={ImageEnum.enum_defaultSvg}
                 icon={<BasketIcon />}
-                fill={Colors.BLACK}
+                fill={Colors.PURPLE}
+                stroke={Colors.PURPLE}
               />
               <TextAtom margin="0 0 0 10px" type={TextEnum.enum_Text_H4}>
                 Корзина

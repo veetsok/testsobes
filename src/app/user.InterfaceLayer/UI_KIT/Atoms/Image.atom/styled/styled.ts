@@ -28,6 +28,7 @@ export const DefaultSvg = styled.div<ImageStyleProps>`
     width: 100%;
     height: 100%;
     fill: ${(props) => props.fill};
+    stroke: ${(props) => props.stroke};
   }
 `;
 
