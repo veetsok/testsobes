@@ -39,5 +39,3 @@ export const A = styled.a`
   font-weight: 400;
   line-height: normal;
 `;
-
-// export const MenuTopLeft = styled.div``
