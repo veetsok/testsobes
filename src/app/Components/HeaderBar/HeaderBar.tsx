@@ -4,6 +4,6 @@ import * as ST from "./styled/styled";
 interface HeaderBarProps {}
 
 const HeaderBar: React.FC<HeaderBarProps> = () => {
-  return <div>Have a good coding</div>;
+  return <ST.Header>Have a good coding</ST.Header>;
 };
 export default HeaderBar;
