@@ -4,7 +4,7 @@ import { ImageStyleProps } from "../../type";
 
 export const commonImageStyles = css<ImageStyleProps>`
   display: inline-flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   background: ${(props) =>
     props.background ? `#fff 50% / contain no-repeat url(${props.background})` : "none"};
