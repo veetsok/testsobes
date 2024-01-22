@@ -25,7 +25,6 @@ export const ListItem = styled.div`
 
 export const Social = styled.div`
   display: flex;
-  align-items: center;
 `;
 
 export const MenuTopRight = styled.div``;
