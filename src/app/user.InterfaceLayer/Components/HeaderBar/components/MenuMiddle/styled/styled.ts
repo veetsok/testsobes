@@ -19,6 +19,20 @@ export const Logo = styled.div`
 
 export const Search = styled.div``;
 
+export const MenuSearch = styled.input`
+  border: none;
+  outline: none;
+  width: 100%;
+  font-weight: 400;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+`;
+
 export const ShopBox = styled.div`
   display: flex;
   align-items: center;

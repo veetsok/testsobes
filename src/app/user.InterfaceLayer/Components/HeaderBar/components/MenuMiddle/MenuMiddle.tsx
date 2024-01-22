@@ -47,7 +47,7 @@ const MenuMiddle: React.FC<MenuMiddleProps> = () => {
           </ButtonAtom>
 
           <ST.Search>
-            <div>SELECT</div>
+            <ST.MenuSearch type="search" placeholder="Искать самокат KUGO" />
             <ImageAtom type={ImageEnum.enum_defaultSvg} icon={<SearchIcon />} />
           </ST.Search>
           <ST.ShopBox>
@@ -63,7 +63,10 @@ const MenuMiddle: React.FC<MenuMiddleProps> = () => {
               icon={<HeartIcon />}
               fill={Colors.BLACK}
             />
-            <ButtonAtom type={ButtonEnum.enum_defaultButton}>
+            <ButtonAtom
+              type={ButtonEnum.enum_defaultButton}
+              background={Colors.TRANSPARENT}
+            >
               <ImageAtom
                 type={ImageEnum.enum_defaultSvg}
                 icon={<BasketIcon />}
