@@ -58,6 +58,7 @@ const MenuTop: React.FC<MenuTopProps> = () => {
                 cursor="pointer"
                 width="12px"
                 fill={Colors.GRAY}
+                $hoverFill={Colors.VIBER}
               />
               <ImageAtom
                 type={ImageEnum.enum_defaultSvg}
@@ -66,6 +67,7 @@ const MenuTop: React.FC<MenuTopProps> = () => {
                 cursor="pointer"
                 width="12px"
                 fill={Colors.GRAY}
+                $hoverFill={Colors.WHATSAPP}
               />
               <ImageAtom
                 type={ImageEnum.enum_defaultSvg}
@@ -73,6 +75,7 @@ const MenuTop: React.FC<MenuTopProps> = () => {
                 cursor="pointer"
                 width="12px"
                 fill={Colors.GRAY}
+                $hoverFill={Colors.TELEGRAM}
               />
             </ST.Social>
           </ST.Left>

@@ -17,6 +17,7 @@ export interface ImageStyleProps {
   $borderRadius?: ICommonComponentProps["borderRadius"];
   border?: ICommonComponentProps["border"];
   height?: ICommonComponentProps["height"];
+  $hoverFill?: ICommonComponentProps["hoverFill"];
   width?: ICommonComponentProps["width"];
   margin?: ICommonComponentProps["margin"];
   padding?: ICommonComponentProps["padding"];

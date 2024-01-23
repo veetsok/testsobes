@@ -29,6 +29,9 @@ export const DefaultSvg = styled.div<ImageStyleProps>`
     height: 100%;
     fill: ${(props) => props.fill};
     stroke: ${(props) => props.stroke};
+    &:hover {
+      fill: ${(props) => props.$hoverFill};
+    }
   }
 `;
 

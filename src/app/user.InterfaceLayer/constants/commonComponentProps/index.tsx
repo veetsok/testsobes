@@ -20,6 +20,7 @@ export enum CommonComponentsProps {
   fill = "fill",
   stroke = "stroke",
   height = "height",
+  hoverFill = "hoverFill",
   icon = "icon",
   isError = "isError",
   isLoading = "isLoading",
@@ -65,6 +66,7 @@ export interface ICommonComponentProps {
   [CommonComponentsProps.fill]?: string;
   [CommonComponentsProps.stroke]?: string;
   [CommonComponentsProps.height]?: string;
+  [CommonComponentsProps.hoverFill]?: string;
   [CommonComponentsProps.icon]?: JSX.Element | ReactNode;
   [CommonComponentsProps.isError]?: boolean;
   [CommonComponentsProps.isLoading]?: boolean;
