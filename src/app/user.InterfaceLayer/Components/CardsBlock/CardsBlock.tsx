@@ -5,10 +5,19 @@ import TextAtom from "../../UI_KIT/Atoms/Text.atom";
 import TextEnum from "../../UI_KIT/Atoms/Text.atom/enum";
 import Filter from "./components/Filter/Filter";
 import CardItem from "./components/CardItem/CardItem";
+import { useQueryStore } from "@/app/business.InterfaceLayer/hooks/useQueryStore";
+import useLocalStore from "@/app/business.InterfaceLayer/useLocalStore";
 
 interface CardsBlockProps {}
 
 const CardsBlock: React.FC<CardsBlockProps> = () => {
+  // const { products, isLoading } = useQueryStore();
+  // const { selectProduct } = useLocalStore();
+
+  // if (isLoading) {
+  //   return <div>Loading...</div>;
+  // }
+
   return (
     <ST.Container className={styles.container}>
       <ST.Header>
@@ -17,7 +26,15 @@ const CardsBlock: React.FC<CardsBlockProps> = () => {
         </TextAtom>
         <Filter />
       </ST.Header>
-      <ST.CardsBlock></ST.CardsBlock>
+      <ST.CardsBlock>
+        {/* {products.map((product) => (
+          <CardItem
+            key={product.id}
+            product={product}
+            onSelect={() => selectProduct(product)}
+          />
+        ))} */}
+      </ST.CardsBlock>
     </ST.Container>
   );
 };

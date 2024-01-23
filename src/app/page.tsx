@@ -1,4 +1,3 @@
-import Image from "next/image";
 import SubMain from "./user.InterfaceLayer/Components/SubMain/SubMain";
 import CardsBlock from "./user.InterfaceLayer/Components/CardsBlock/CardsBlock";
 

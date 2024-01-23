@@ -12,14 +12,16 @@ import TimerIcon from "../../../../shared/assets/icons/timer.svg?react";
 import CartIcon from "../../../../shared/assets/icons/shopping-cart.svg?react";
 import HeartIcon from "../../../../shared/assets/icons/heart.svg?react";
 
-interface CardItemProps {}
+interface CardItemProps {
+  product: any;
+}
 
-const CardItem: React.FC<CardItemProps> = () => {
+const CardItem: React.FC<CardItemProps> = (product) => {
   return (
     <ST.CardItem>
-      <ST.CardItemImg>IMG</ST.CardItemImg>
+      <ST.CardItemImg>$IMG</ST.CardItemImg>
       <ST.CardItemBox>
-        <TextAtom type={TextEnum.enum_Text_H5}>TITLE</TextAtom>
+        <TextAtom type={TextEnum.enum_Text_H5}>{product.title}</TextAtom>
         <ST.CardItemGrid>
           <ST.GridTextBox>
             <ImageAtom type={ImageEnum.enum_defaultSvg} icon={<AccumulatorIcon />} />
@@ -29,7 +31,7 @@ const CardItem: React.FC<CardItemProps> = () => {
               fontWeight="400"
               color={Colors.GRAY}
             >
-              mAh
+              {product.charge} mAh
             </TextAtom>
           </ST.GridTextBox>
           <ST.GridTextBox>
@@ -40,7 +42,7 @@ const CardItem: React.FC<CardItemProps> = () => {
               fontWeight="400"
               color={Colors.GRAY}
             >
-              л.с.
+              {product.horsepower} л.с.
             </TextAtom>
           </ST.GridTextBox>
           <ST.GridTextBox>
@@ -51,7 +53,7 @@ const CardItem: React.FC<CardItemProps> = () => {
               fontWeight="400"
               color={Colors.GRAY}
             >
-              км/ч
+              {product.speed} км/ч
             </TextAtom>
           </ST.GridTextBox>
           <ST.GridTextBox>
@@ -62,7 +64,7 @@ const CardItem: React.FC<CardItemProps> = () => {
               fontWeight="400"
               color={Colors.GRAY}
             >
-              часов
+              {product.chargeTime} часов
             </TextAtom>
           </ST.GridTextBox>
         </ST.CardItemGrid>
@@ -76,10 +78,10 @@ const CardItem: React.FC<CardItemProps> = () => {
                 color={Colors.GRAY}
                 text-decoration-line={true}
               >
-                123
+                {product.actualPrice} ₽
               </TextAtom>
               <TextAtom type={TextEnum.enum_Text_H3} color={Colors.BLACK}>
-                123 ₽
+                {product.priceSale} 123 ₽
               </TextAtom>
             </ST.Price>
             <ST.Icons>
