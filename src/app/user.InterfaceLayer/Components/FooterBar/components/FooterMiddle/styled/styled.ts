@@ -23,3 +23,14 @@ export const GridItem = styled.div`
     color: ${Colors.GRAY};
   }
 `;
+
+export const GridItemBlock1 = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 255px;
+`;
+export const GridItemBlock2 = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 365px;
+`;
