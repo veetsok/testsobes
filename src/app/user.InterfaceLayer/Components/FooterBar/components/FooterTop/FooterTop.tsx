@@ -12,12 +12,17 @@ interface FooterTopProps {}
 const FooterTop: React.FC<FooterTopProps> = () => {
   return (
     <ST.FooterTop>
-      <div className={styles.container}>
-        <TextAtom type={TextEnum.enum_Text_H1} color={Colors.WHITE} fontWeight="600">
+      <ST.Container className={styles.container}>
+        <TextAtom
+          type={TextEnum.enum_Text_H4}
+          color={Colors.WHITE}
+          fontWeight="600"
+          textTransform="uppercase"
+        >
           Оставьте свою почту и станьте первым, кто получит скидку на новые самокаты
         </TextAtom>
         <ButtonAtom type={ButtonEnum.enum_defaultButton}>Подписаться</ButtonAtom>
-      </div>
+      </ST.Container>
     </ST.FooterTop>
   );
 };
