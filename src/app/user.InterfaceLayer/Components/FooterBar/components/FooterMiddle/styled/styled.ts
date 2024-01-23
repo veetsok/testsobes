@@ -7,6 +7,10 @@ export const FooterMiddle = styled.div`
   border-bottom: 1px solid ${Colors.BORDER};
 `;
 
+export const Container = styled.div`
+  position: relative;
+`;
+
 export const Grid = styled.div`
   display: grid;
   padding: 46px 0;
@@ -15,11 +19,12 @@ export const Grid = styled.div`
 `;
 
 export const GridItem = styled.div`
-  height: 120px;
+  height: 153px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  &h {
+  row-gap: 10px;
+  & h6 {
     color: ${Colors.GRAY};
   }
 `;
@@ -28,9 +33,14 @@ export const GridItemBlock1 = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   max-width: 255px;
+  row-gap: 10px;
+  & h6 {
+    color: ${Colors.GRAY};
+  }
 `;
 export const GridItemBlock2 = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   max-width: 365px;
+  row-gap: 10px;
 `;

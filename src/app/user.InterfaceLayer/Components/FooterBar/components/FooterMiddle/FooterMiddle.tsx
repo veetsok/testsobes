@@ -9,105 +9,80 @@ interface FooterMiddleProps {}
 const FooterMiddle: React.FC<FooterMiddleProps> = () => {
   return (
     <ST.FooterMiddle>
-      <div className={styles.container}>
+      <ST.Container className={styles.container}>
         <ST.Grid>
           <ST.GridItem>
-            <TextAtom margin="5px 0" type={TextEnum.enum_Text_H4} fontWeight="500">
+            <TextAtom type={TextEnum.enum_Text_H4} fontWeight="500">
               Каталог товаров
             </TextAtom>
-            <TextAtom margin="5px 0" type={TextEnum.enum_Text_H6} fontWeight="400">
+            <TextAtom type={TextEnum.enum_Text_H6} fontWeight="400">
               Электросамокаты
             </TextAtom>
-            <TextAtom margin="5px 0" type={TextEnum.enum_Text_H6} fontWeight="400">
+            <TextAtom type={TextEnum.enum_Text_H6} fontWeight="400">
               Электроскутеры
             </TextAtom>
-            <TextAtom margin="5px 0" type={TextEnum.enum_Text_H6} fontWeight="400">
+            <TextAtom type={TextEnum.enum_Text_H6} fontWeight="400">
               Электровелосипеды
             </TextAtom>
           </ST.GridItem>
-          <div>
-            <TextAtom margin="5px 0" type={TextEnum.enum_Text_H4} fontWeight="500">
+          <ST.GridItem>
+            <TextAtom type={TextEnum.enum_Text_H4} fontWeight="500">
               Покупателям
             </TextAtom>
             <ST.GridItemBlock1>
-              <TextAtom margin="5px 0" type={TextEnum.enum_Text_H6} fontWeight="400">
+              <TextAtom type={TextEnum.enum_Text_H6} fontWeight="400">
                 Сервисный центр
               </TextAtom>
-              <TextAtom margin="5px 0" type={TextEnum.enum_Text_H6} fontWeight="400">
+              <TextAtom type={TextEnum.enum_Text_H6} fontWeight="400">
                 Доставка и оплата
               </TextAtom>
-              <TextAtom margin="5px 0" type={TextEnum.enum_Text_H6} fontWeight="400">
+              <TextAtom type={TextEnum.enum_Text_H6} fontWeight="400">
                 Рассрочка
               </TextAtom>
-              <TextAtom margin="5px 0" type={TextEnum.enum_Text_H6} fontWeight="400">
+              <TextAtom type={TextEnum.enum_Text_H6} fontWeight="400">
                 Тест-драйв
               </TextAtom>
-
-              <TextAtom margin="5px 0" type={TextEnum.enum_Text_H6} fontWeight="400">
+              <TextAtom type={TextEnum.enum_Text_H6} fontWeight="400">
                 Блог
               </TextAtom>
-              <TextAtom margin="5px 0" type={TextEnum.enum_Text_H6} fontWeight="400">
+              <TextAtom type={TextEnum.enum_Text_H6} fontWeight="400">
                 Сотрудничество
               </TextAtom>
-              <TextAtom margin="5px 0" type={TextEnum.enum_Text_H6} fontWeight="400">
+              <TextAtom type={TextEnum.enum_Text_H6} fontWeight="400">
                 Контакты
               </TextAtom>
-              <TextAtom margin="5px 0" type={TextEnum.enum_Text_H6} fontWeight="400">
+              <TextAtom type={TextEnum.enum_Text_H6} fontWeight="400">
                 Акции
               </TextAtom>
             </ST.GridItemBlock1>
-          </div>
+          </ST.GridItem>
           <ST.GridItem>
-            <div>
-              <TextAtom margin="5px 0" type={TextEnum.enum_Text_H4} fontWeight="500">
-                Контакты
+            <TextAtom type={TextEnum.enum_Text_H4} fontWeight="500">
+              Контакты
+            </TextAtom>
+            <ST.GridItemBlock2>
+              <TextAtom type={TextEnum.enum_Text_H6} fontWeight="400" fontSize="12px">
+                Call-центр
               </TextAtom>
-              <ST.GridItemBlock2>
-                <TextAtom
-                  margin="5px 0"
-                  type={TextEnum.enum_Text_H6}
-                  fontWeight="400"
-                  fontSize="12px"
-                >
-                  Call-центр
-                </TextAtom>
-                <TextAtom
-                  margin="5px 0"
-                  type={TextEnum.enum_Text_H6}
-                  fontWeight="400"
-                  fontSize="12px"
-                >
-                  Сервисный центр
-                </TextAtom>
-
-                <TextAtom margin="5px 0" type={TextEnum.enum_Text_H5} fontWeight="500">
-                  +7 (800) 505-54-61
-                </TextAtom>
-
-                <TextAtom margin="5px 0" type={TextEnum.enum_Text_H5} fontWeight="500">
-                  +7 (499) 350-76-92
-                </TextAtom>
-                <TextAtom
-                  margin="5px 0"
-                  type={TextEnum.enum_Text_H6}
-                  fontWeight="400"
-                  fontSize="12px"
-                >
-                  Пн-Вс 10:00 - 20:00
-                </TextAtom>
-                <TextAtom
-                  margin="5px 0"
-                  type={TextEnum.enum_Text_H6}
-                  fontWeight="400"
-                  fontSize="12px"
-                >
-                  Пн-Вс 10:00 - 20:00
-                </TextAtom>
-              </ST.GridItemBlock2>
-            </div>
+              <TextAtom type={TextEnum.enum_Text_H6} fontWeight="400" fontSize="12px">
+                Сервисный центр
+              </TextAtom>
+              <TextAtom type={TextEnum.enum_Text_H5} fontWeight="500">
+                +7 (800) 505-54-61
+              </TextAtom>
+              <TextAtom type={TextEnum.enum_Text_H5} fontWeight="500">
+                +7 (499) 350-76-92
+              </TextAtom>
+              <TextAtom type={TextEnum.enum_Text_H6} fontWeight="400" fontSize="12px">
+                Пн-Вс 10:00 - 20:00
+              </TextAtom>
+              <TextAtom type={TextEnum.enum_Text_H6} fontWeight="400" fontSize="12px">
+                Пн-Вс 10:00 - 20:00
+              </TextAtom>
+            </ST.GridItemBlock2>
           </ST.GridItem>
         </ST.Grid>
-      </div>
+      </ST.Container>
     </ST.FooterMiddle>
   );
 };
