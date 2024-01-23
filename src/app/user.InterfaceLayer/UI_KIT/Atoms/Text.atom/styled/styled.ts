@@ -51,9 +51,9 @@ export const H5 = styled.h5<TextStyleProps>`
 export const H6 = styled.h6<TextStyleProps>`
   ${commonTextStyles};
   font-family: ${commonTextFonts[TextEnum.enum_Text_H6].fontFamily};
-  font-size:${(props) => props.fontSize};
+  font-size: ${(props) => props.fontSize};
   font-style: ${commonTextFonts[TextEnum.enum_Text_H6].fontStyle};
-  font-weight: ${(props) => props.fontWeight},
+  font-weight: ${(props) => props.fontWeight};
   line-height: ${commonTextFonts[TextEnum.enum_Text_H6].lineHeight};
 `;
 
@@ -61,9 +61,9 @@ export const A1 = styled.a<TextStyleProps>`
   ${commonTextStyles};
   text-decoration: none;
   font-family: ${commonTextFonts[TextEnum.enum_Text_A1].fontFamily};
-  font-size: ${(props) => props.fontSize},
+  font-size: ${(props) => props.fontSize};
   font-style: ${commonTextFonts[TextEnum.enum_Text_A1].fontStyle};
-  font-weight: ${(props) => props.fontWeight},
+  font-weight: ${(props) => props.fontWeight};
   line-height: ${commonTextFonts[TextEnum.enum_Text_A1].lineHeight};
 `;
 

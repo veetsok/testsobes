@@ -19,4 +19,7 @@ export const GridItem = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  &h {
+    color: ${Colors.GRAY};
+  }
 `;
