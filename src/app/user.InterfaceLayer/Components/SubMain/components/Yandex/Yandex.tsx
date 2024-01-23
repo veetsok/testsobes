@@ -18,15 +18,23 @@ const Yandex: React.FC<YandexProps> = () => {
         <ImageAtom type={ImageEnum.enum_defaultSvg} icon={<YandexIcon />} />
       </ST.YandexBlock>
       <ST.YandexText>
-        <TextAtom color={Colors.BLACK} type={TextEnum.enum_Text_H5} fontWeight="400">
+        <TextAtom
+          color={Colors.BLACK}
+          type={TextEnum.enum_Text_H6}
+          fontWeight="400"
+          fontSize="12px"
+        >
           Яндекс отзывы
         </TextAtom>
         <ST.YandexSubText>
           <ImageAtom type={ImageEnum.enum_defaultSvg} icon={<StarIcon />} />
           <TextAtom
             margin="0 0 0 5px"
+            width="14px"
+            height="14px"
             color={Colors.BLACK}
-            type={TextEnum.enum_Text_H3}
+            type={TextEnum.enum_Text_H2}
+            textTransform="uppercase"
             fontWeight="600"
           >
             4,9

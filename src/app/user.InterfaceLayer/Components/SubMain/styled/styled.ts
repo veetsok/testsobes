@@ -8,7 +8,4 @@ export const SubMain = styled.div`
   padding: 30px 0 74px 0;
 `;
 
-export const SubMainBox = styled.div`
-  & h3 {
-  }
-`;
+export const SubMainBox = styled.div``;
