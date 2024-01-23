@@ -2,6 +2,17 @@
   font-family: "Inter", sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
+
+.PageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.MainContainer {
+  flex: 1;
+}
+
 body {
   margin: 0;
   padding: 0;
