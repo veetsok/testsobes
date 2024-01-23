@@ -17,9 +17,7 @@ const CardsBlock: React.FC<CardsBlockProps> = () => {
         </TextAtom>
         <Filter />
       </ST.Header>
-      <ST.CardsBlock>
-        <CardItem />
-      </ST.CardsBlock>
+      <ST.CardsBlock></ST.CardsBlock>
     </ST.Container>
   );
 };
