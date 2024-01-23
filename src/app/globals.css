@@ -1,5 +1,5 @@
 * {
-  font-family: "AvenirNextCyr-Regular", sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
 body {
@@ -75,4 +75,10 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px #0000 inset;
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
+}
+video {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

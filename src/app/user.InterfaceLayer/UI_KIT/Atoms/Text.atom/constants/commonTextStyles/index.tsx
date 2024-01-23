@@ -11,4 +11,5 @@ export const commonTextStyles = css<TextStyleProps>`
   padding: ${(props) => props.padding};
   text-align: ${(props) => props.align};
   color: ${(props) => props.color};
+  text-transform: ${(props) => props.textTransform};
 `;

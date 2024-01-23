@@ -40,6 +40,7 @@ export enum CommonComponentsProps {
   right = "right",
   src = "src",
   top = "top",
+  textTransform = "textTransform",
   value = "value",
   width = "width",
 }
@@ -84,6 +85,7 @@ export interface ICommonComponentProps {
   [CommonComponentsProps.right]?: string;
   [CommonComponentsProps.src]?: string;
   [CommonComponentsProps.top]?: string;
+  [CommonComponentsProps.textTransform]?: string;
   [CommonComponentsProps.value]?: string | number | undefined;
   [CommonComponentsProps.width]?: string;
 }

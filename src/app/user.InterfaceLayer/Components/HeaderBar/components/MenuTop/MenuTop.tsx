@@ -23,6 +23,8 @@ const MenuTop: React.FC<MenuTopProps> = () => {
               <TextAtom
                 type={TextEnum.enum_Text_A1}
                 href=""
+                fontSize="12px"
+                fontWeight="400"
                 color={Colors.GRAY}
                 margin="0 30px 0 0"
               >
@@ -31,12 +33,20 @@ const MenuTop: React.FC<MenuTopProps> = () => {
               <TextAtom
                 type={TextEnum.enum_Text_A1}
                 href=""
+                fontSize="12px"
+                fontWeight="400"
                 color={Colors.GRAY}
                 margin="0 30px 0 0"
               >
                 Сотрудничество
               </TextAtom>
-              <TextAtom type={TextEnum.enum_Text_A1} href="" color={Colors.GRAY}>
+              <TextAtom
+                type={TextEnum.enum_Text_A1}
+                href=""
+                fontSize="12px"
+                fontWeight="400"
+                color={Colors.GRAY}
+              >
                 Заказать звонок
               </TextAtom>
             </ST.ListItem>
@@ -71,6 +81,8 @@ const MenuTop: React.FC<MenuTopProps> = () => {
               type={TextEnum.enum_Text_A1}
               href=""
               color={Colors.GRAY}
+              fontSize="12px"
+              fontWeight="500"
               margin="0 9px 0 0"
             >
               +7 (800) 505-54-61

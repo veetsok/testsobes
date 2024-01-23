@@ -15,4 +15,5 @@ export interface TextStyleProps {
   align?: ICommonComponentProps["align"];
   fontSize?: ICommonComponentProps["fontSize"];
   fontWeight?: ICommonComponentProps["fontWeight"];
+  textTransform?: ICommonComponentProps["textTransform"];
 }
