@@ -9,6 +9,8 @@ enum Colors {
   TRANSPARENT = "transparent",
   BORDER = "#ecf3ff",
   GRAY = "#5D6C7B",
+  BG_BUTTON = "#F4F7FB",
+  BG_CARD = "#eaebed",
 }
 
 export default Colors;

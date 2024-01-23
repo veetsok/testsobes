@@ -21,6 +21,18 @@ const Button: React.FC<ButtonType & ButtonStyleProps> = (props) => {
         </ST.DefaultButton>
       );
     }
+    case ButtonEnum.enum_filterButton: {
+      return (
+        <ST.FilterButton
+          onClick={onClick}
+          isLoading={isLoading}
+          active={active}
+          {...otherProps}
+        >
+          {children}
+        </ST.FilterButton>
+      );
+    }
     default: {
       return <ST.Button>Ошибка</ST.Button>;
     }

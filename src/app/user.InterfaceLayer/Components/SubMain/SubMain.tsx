@@ -13,7 +13,11 @@ const SubMain: React.FC<SubMainProps> = () => {
     <div className={styles.container}>
       <ST.SubMain>
         <ST.SubMainBox>
-          <TextAtom color={Colors.BLACK} type={TextEnum.enum_Text_H2}>
+          <TextAtom
+            color={Colors.BLACK}
+            type={TextEnum.enum_Text_H2}
+            textTransform="uppercase"
+          >
             Гарантия 1 год
           </TextAtom>
           <TextAtom color={Colors.BLACK} type={TextEnum.enum_Text_H5} fontWeight="400">
@@ -21,7 +25,11 @@ const SubMain: React.FC<SubMainProps> = () => {
           </TextAtom>
         </ST.SubMainBox>
         <ST.SubMainBox>
-          <TextAtom color={Colors.BLACK} type={TextEnum.enum_Text_H2}>
+          <TextAtom
+            color={Colors.BLACK}
+            type={TextEnum.enum_Text_H2}
+            textTransform="uppercase"
+          >
             рассрочка
           </TextAtom>
           <TextAtom color={Colors.BLACK} type={TextEnum.enum_Text_H5} fontWeight="400">
@@ -30,7 +38,11 @@ const SubMain: React.FC<SubMainProps> = () => {
         </ST.SubMainBox>
 
         <ST.SubMainBox>
-          <TextAtom color={Colors.BLACK} type={TextEnum.enum_Text_H2}>
+          <TextAtom
+            color={Colors.BLACK}
+            type={TextEnum.enum_Text_H2}
+            textTransform="uppercase"
+          >
             Подарки
           </TextAtom>
           <TextAtom color={Colors.BLACK} type={TextEnum.enum_Text_H5} fontWeight="400">
