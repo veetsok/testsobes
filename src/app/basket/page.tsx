@@ -9,6 +9,7 @@ import { useCartStore } from "../business.InterfaceLayer/store/cartStore";
 import PayBlock from "./components/PayBlock/PayBlock";
 import ButtonAtom from "../user.InterfaceLayer/UI_KIT/Atoms/Button.atom";
 import ButtonEnum from "../user.InterfaceLayer/UI_KIT/Atoms/Button.atom/enum";
+import CardsBox from "./components/CardsBox/CardsBox";
 
 export default function Basket() {
   const items = useCartStore((state) => state.items);
@@ -17,6 +18,8 @@ export default function Basket() {
     // Ensure that the store is properly initialized on the client side
     useCartStore.getState();
   }, []);
+
+  console.log(items);
 
   return (
     <main>
@@ -32,17 +35,19 @@ export default function Basket() {
           $sum товаров
         </TextAtom>
         <ST.Basket>
-          <ST.HeaderBox>
-            <TextAtom type={TextEnum.enum_Text_H6}>Товар</TextAtom>
-            <TextAtom type={TextEnum.enum_Text_H6}>Количество</TextAtom>
-            <TextAtom type={TextEnum.enum_Text_H6}>Сумма</TextAtom>
-            <ButtonAtom type={ButtonEnum.enum_defaultButton}>Удалить все</ButtonAtom>
-          </ST.HeaderBox>
-          <>
-            {items.map((item) => (
-              <li key={item.id}>{item.title}</li>
-            ))}
-          </>
+          <ST.Box>
+            <ST.HeaderBox>
+              <TextAtom type={TextEnum.enum_Text_H6}>Товар</TextAtom>
+              <TextAtom type={TextEnum.enum_Text_H6}>Количество</TextAtom>
+              <TextAtom type={TextEnum.enum_Text_H6}>Сумма</TextAtom>
+              <ButtonAtom type={ButtonEnum.enum_defaultButton}>Удалить все</ButtonAtom>
+            </ST.HeaderBox>
+            <ST.CardsBox>
+              {items.map((item) => (
+                <CardsBox key={item.id} item={item} />
+              ))}
+            </ST.CardsBox>
+          </ST.Box>
           <PayBlock />
         </ST.Basket>
       </ST.Container>

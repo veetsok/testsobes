@@ -34,3 +34,10 @@ export const HeaderBox = styled.div`
     color: ${Colors.BLACK};
   }
 `;
+
+export const CardsBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 760px;
+  width: 100%;
+`;
