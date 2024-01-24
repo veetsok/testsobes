@@ -9,10 +9,10 @@ export const SrcImageBlock = styled.div<ImageStyleProps>`
 `;
 
 export const SrcImage = styled.img<ImageStyleProps>`
-  height: auto;
+  height: 100%;
   max-height: 100%;
   max-width: 100%;
-  width: auto;
+  width: 100%;
 `;
 
 export const BackgroundImage = styled.div<ImageStyleProps>`

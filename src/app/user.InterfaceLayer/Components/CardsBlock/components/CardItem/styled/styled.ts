@@ -15,8 +15,9 @@ export const CardItem = styled.div`
 
 export const CardItemImg = styled.div`
   height: 231px;
+  text-align: center;
   background: rgb(240, 241, 245);
-  padding: 27px 0 22px;
+  padding: 27px 0 22px 0;
   border-radius: 10px 10px 0 0;
 `;
 

@@ -24,7 +24,13 @@ const CardItem: React.FC<CardItemProps> = ({ product }) => {
   return (
     <ST.CardItem>
       <ST.CardItemImg>
-        <ImageAtom type={ImageEnum.enum_srcImage} src={`${img[0]}`} alt={title} />
+        <ImageAtom
+          type={ImageEnum.enum_srcImage}
+          src={`${img[0]}`}
+          alt={title}
+          width="190px"
+          height="180px"
+        />
       </ST.CardItemImg>
       <ST.CardItemBox>
         <TextAtom type={TextEnum.enum_Text_H5}>{title}</TextAtom>
