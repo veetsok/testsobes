@@ -27,11 +27,14 @@ const Yandex: React.FC<YandexProps> = () => {
           Яндекс отзывы
         </TextAtom>
         <ST.YandexSubText>
-          <ImageAtom type={ImageEnum.enum_defaultSvg} icon={<StarIcon />} />
-          <TextAtom
-            margin="0 0 0 5px"
+          <ImageAtom
             width="14px"
             height="14px"
+            type={ImageEnum.enum_defaultSvg}
+            icon={<StarIcon />}
+          />
+          <TextAtom
+            margin="0 0 0 5px"
             color={Colors.BLACK}
             type={TextEnum.enum_Text_H2}
             textTransform="uppercase"
