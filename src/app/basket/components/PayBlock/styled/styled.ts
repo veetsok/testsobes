@@ -40,6 +40,7 @@ export const CostBlock = styled.div`
 export const Conditions = styled.div`
   max-width: 320px;
   display: flex;
+  align-items: flex-start;
   gap: 12px;
   margin-top: 15px;
 `;

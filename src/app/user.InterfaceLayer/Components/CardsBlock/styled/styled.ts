@@ -1,5 +1,3 @@
-"use client";
-
 import Colors from "@/app/user.InterfaceLayer/constants/colors";
 import styled from "styled-components";
 

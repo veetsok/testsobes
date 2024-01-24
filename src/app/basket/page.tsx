@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useEffect } from "react";
-
 import * as ST from "./styled/styled";
 import styles from "../styles/page.module.css";
 import TextAtom from "../user.InterfaceLayer/UI_KIT/Atoms/Text.atom";
 import TextEnum from "../user.InterfaceLayer/UI_KIT/Atoms/Text.atom/enum";
 import { useCartStore } from "../business.InterfaceLayer/store/cartStore";
 import PayBlock from "./components/PayBlock/PayBlock";
+import ButtonAtom from "../user.InterfaceLayer/UI_KIT/Atoms/Button.atom";
+import ButtonEnum from "../user.InterfaceLayer/UI_KIT/Atoms/Button.atom/enum";
 
 export default function Basket() {
   const items = useCartStore((state) => state.items);
@@ -31,6 +32,12 @@ export default function Basket() {
           $sum товаров
         </TextAtom>
         <ST.Basket>
+          <ST.HeaderBox>
+            <TextAtom type={TextEnum.enum_Text_H6}>Товар</TextAtom>
+            <TextAtom type={TextEnum.enum_Text_H6}>Количество</TextAtom>
+            <TextAtom type={TextEnum.enum_Text_H6}>Сумма</TextAtom>
+            <ButtonAtom type={ButtonEnum.enum_defaultButton}>Удалить все</ButtonAtom>
+          </ST.HeaderBox>
           <>
             {items.map((item) => (
               <li key={item.id}>{item.title}</li>
