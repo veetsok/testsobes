@@ -7,6 +7,7 @@ import styles from "../styles/page.module.css";
 import TextAtom from "../user.InterfaceLayer/UI_KIT/Atoms/Text.atom";
 import TextEnum from "../user.InterfaceLayer/UI_KIT/Atoms/Text.atom/enum";
 import { useCartStore } from "../business.InterfaceLayer/store/cartStore";
+import PayBlock from "./components/PayBlock/PayBlock";
 
 export default function Basket() {
   const items = useCartStore((state) => state.items);
@@ -18,22 +19,26 @@ export default function Basket() {
 
   return (
     <main>
-      <ST.Basket>
-        <ST.Container className={styles.container}>
-          <TextAtom
-            margin="49px 0 40px 0"
-            type={TextEnum.enum_Text_H1}
-            textTransform="uppercase"
-          >
-            Моя корзина
-          </TextAtom>
+      <ST.Container className={styles.container}>
+        <TextAtom
+          margin="49px 0 40px 0"
+          type={TextEnum.enum_Text_H1}
+          textTransform="uppercase"
+        >
+          Моя корзина
+        </TextAtom>
+        <TextAtom type={TextEnum.enum_Text_H6} fontSize="14px" fontWeight="400">
+          $sum товаров
+        </TextAtom>
+        <ST.Basket>
           <>
             {items.map((item) => (
               <li key={item.id}>{item.title}</li>
             ))}
           </>
-        </ST.Container>
-      </ST.Basket>
+          <PayBlock />
+        </ST.Basket>
+      </ST.Container>
     </main>
   );
 }
