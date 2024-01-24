@@ -39,7 +39,7 @@ const CardItem: React.FC<CardItemProps> = ({ product }) => {
             <ImageAtom type={ImageEnum.enum_defaultSvg} icon={<AccumulatorIcon />} />
             <TextAtom
               type={TextEnum.enum_Text_H6}
-              fontSize="14px"
+              fontSize="12px"
               fontWeight="400"
               color={Colors.GRAY}
             >
