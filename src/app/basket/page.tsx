@@ -10,6 +10,7 @@ import PayBlock from "./components/PayBlock/PayBlock";
 import ButtonAtom from "../user.InterfaceLayer/UI_KIT/Atoms/Button.atom";
 import ButtonEnum from "../user.InterfaceLayer/UI_KIT/Atoms/Button.atom/enum";
 import CardsBox from "./components/CardsBox/CardsBox";
+import EmptyBlock from "./components/EmptyBlock/EmptyBlock";
 
 export default function Basket() {
   const items = useCartStore((state) => state.items);
@@ -31,25 +32,33 @@ export default function Basket() {
         >
           Моя корзина
         </TextAtom>
-        <TextAtom type={TextEnum.enum_Text_H6} fontSize="14px" fontWeight="400">
-          $sum товаров
-        </TextAtom>
-        <ST.Basket>
-          <ST.Box>
-            <ST.HeaderBox>
-              <TextAtom type={TextEnum.enum_Text_H6}>Товар</TextAtom>
-              <TextAtom type={TextEnum.enum_Text_H6}>Количество</TextAtom>
-              <TextAtom type={TextEnum.enum_Text_H6}>Сумма</TextAtom>
-              <ButtonAtom type={ButtonEnum.enum_defaultButton}>Удалить все</ButtonAtom>
-            </ST.HeaderBox>
-            <ST.CardsBox>
-              {items.map((item) => (
-                <CardsBox key={item.id} item={item} />
-              ))}
-            </ST.CardsBox>
-          </ST.Box>
-          <PayBlock />
-        </ST.Basket>
+        {items.length < 0 ? (
+          <>
+            <TextAtom type={TextEnum.enum_Text_H6} fontSize="14px" fontWeight="400">
+              $sum товаров
+            </TextAtom>
+            <ST.Basket>
+              <ST.Box>
+                <ST.HeaderBox>
+                  <TextAtom type={TextEnum.enum_Text_H6}>Товар</TextAtom>
+                  <TextAtom type={TextEnum.enum_Text_H6}>Количество</TextAtom>
+                  <TextAtom type={TextEnum.enum_Text_H6}>Сумма</TextAtom>
+                  <ButtonAtom type={ButtonEnum.enum_defaultButton}>
+                    Удалить все
+                  </ButtonAtom>
+                </ST.HeaderBox>
+                <ST.CardsBox>
+                  {items.map((item) => (
+                    <CardsBox key={item.id} item={item} />
+                  ))}
+                </ST.CardsBox>
+              </ST.Box>
+              <PayBlock />
+            </ST.Basket>
+          </>
+        ) : (
+          <EmptyBlock />
+        )}
       </ST.Container>
     </main>
   );
