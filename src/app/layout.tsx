@@ -4,6 +4,7 @@ import "./styles/fonts.module.css";
 import "./globals.css";
 import HeaderBar from "./user.InterfaceLayer/Components/HeaderBar/HeaderBar";
 import FooterBar from "./user.InterfaceLayer/Components/FooterBar/FooterBar";
+import ReactQueryProvider from "./business.InterfaceLayer/providers/ReactQueryProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,9 +21,11 @@ export default function RootLayout({
       <body>
         <StyledComponentsRegistry>
           <div className="PageContainer">
-            <HeaderBar />
-            <div className="MainContainer">{children}</div>
-            <FooterBar />
+            <ReactQueryProvider>
+              <HeaderBar />
+              <div className="MainContainer">{children}</div>
+              <FooterBar />
+            </ReactQueryProvider>
           </div>
         </StyledComponentsRegistry>
       </body>

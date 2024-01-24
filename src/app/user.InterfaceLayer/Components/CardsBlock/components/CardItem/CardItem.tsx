@@ -11,17 +11,23 @@ import SpeedometerIcon from "../../../../shared/assets/icons/speedometer.svg?rea
 import TimerIcon from "../../../../shared/assets/icons/timer.svg?react";
 import CartIcon from "../../../../shared/assets/icons/shopping-cart.svg?react";
 import HeartIcon from "../../../../shared/assets/icons/heart.svg?react";
+import { Products } from "@/app/business.InterfaceLayer/hooks/useQueryStore";
 
 interface CardItemProps {
-  product: any;
+  product: Products;
 }
 
-const CardItem: React.FC<CardItemProps> = (product) => {
+const CardItem: React.FC<CardItemProps> = ({ product }) => {
+  const { title, charge, horsepower, speed, chargeTime, actualPrice, priceSale, img } =
+    product;
+
   return (
     <ST.CardItem>
-      <ST.CardItemImg>$IMG</ST.CardItemImg>
+      <ST.CardItemImg>
+        <ImageAtom type={ImageEnum.enum_srcImage} src={`${img[0]}`} alt={title} />
+      </ST.CardItemImg>
       <ST.CardItemBox>
-        <TextAtom type={TextEnum.enum_Text_H5}>{product.title}</TextAtom>
+        <TextAtom type={TextEnum.enum_Text_H5}>{title}</TextAtom>
         <ST.CardItemGrid>
           <ST.GridTextBox>
             <ImageAtom type={ImageEnum.enum_defaultSvg} icon={<AccumulatorIcon />} />
@@ -31,7 +37,7 @@ const CardItem: React.FC<CardItemProps> = (product) => {
               fontWeight="400"
               color={Colors.GRAY}
             >
-              {product.charge} mAh
+              {charge}
             </TextAtom>
           </ST.GridTextBox>
           <ST.GridTextBox>
@@ -42,7 +48,7 @@ const CardItem: React.FC<CardItemProps> = (product) => {
               fontWeight="400"
               color={Colors.GRAY}
             >
-              {product.horsepower} л.с.
+              {horsepower} л.с.
             </TextAtom>
           </ST.GridTextBox>
           <ST.GridTextBox>
@@ -53,7 +59,7 @@ const CardItem: React.FC<CardItemProps> = (product) => {
               fontWeight="400"
               color={Colors.GRAY}
             >
-              {product.speed} км/ч
+              {speed} км/ч
             </TextAtom>
           </ST.GridTextBox>
           <ST.GridTextBox>
@@ -64,7 +70,7 @@ const CardItem: React.FC<CardItemProps> = (product) => {
               fontWeight="400"
               color={Colors.GRAY}
             >
-              {product.chargeTime} часов
+              {chargeTime} часов
             </TextAtom>
           </ST.GridTextBox>
         </ST.CardItemGrid>
@@ -78,10 +84,10 @@ const CardItem: React.FC<CardItemProps> = (product) => {
                 color={Colors.GRAY}
                 text-decoration-line={true}
               >
-                {product.actualPrice} ₽
+                {actualPrice} ₽
               </TextAtom>
               <TextAtom type={TextEnum.enum_Text_H3} color={Colors.BLACK}>
-                {product.priceSale} 123 ₽
+                {priceSale} ₽
               </TextAtom>
             </ST.Price>
             <ST.Icons>
