@@ -7,7 +7,9 @@ export const commonTextStyles = css<TextStyleProps>`
   margin: 0;
   white-space: normal;
   color: ${(props) => props.color};
+  width: ${(props) => props.width};
   background: ${(props) => props.background};
+  border: ${(props) => props.border};
   border-radius: ${(props) => props.$borderRadius};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};

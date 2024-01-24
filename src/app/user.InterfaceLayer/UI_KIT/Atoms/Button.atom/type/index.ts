@@ -14,6 +14,7 @@ export interface ButtonStyleProps {
   padding?: ICommonComponentProps["padding"];
   margin?: ICommonComponentProps["margin"];
   width?: ICommonComponentProps["width"];
+  height?: ICommonComponentProps["height"];
   border?: ICommonComponentProps["border"];
   $borderRadius?: ICommonComponentProps["borderRadius"];
   background?: ICommonComponentProps["background"];

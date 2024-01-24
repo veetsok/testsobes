@@ -9,7 +9,9 @@ export interface TextType extends ICommonComponentProps, TextStyleProps {
 }
 export interface TextStyleProps {
   isLoading?: ICommonComponentProps["isLoading"];
-  color?: ICommonComponentProps["color"];
+  color?: ICommonComponentProps["width"];
+  width?: ICommonComponentProps["border"];
+  border?: ICommonComponentProps["color"];
   margin?: ICommonComponentProps["margin"];
   padding?: ICommonComponentProps["padding"];
   align?: ICommonComponentProps["align"];

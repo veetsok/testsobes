@@ -1,14 +1,13 @@
 import { css } from "styled-components";
 
 import { ButtonStyleProps } from "../../type";
-import Colors from "../../../../../constants/colors";
 
 export const commonButtonStyles = css<ButtonStyleProps>`
   display: inline-flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  height: 100%;
+  height: ${(props) => (props.height ? props.height : "auto")};
   background: ${(props) => props.background};
   margin: ${(props) => props.margin};
   width: ${(props) => (props.width ? props.width : "auto")};

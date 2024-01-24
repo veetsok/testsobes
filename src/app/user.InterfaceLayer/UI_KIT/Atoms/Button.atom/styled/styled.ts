@@ -9,7 +9,7 @@ import Colors from "../../../../constants/colors";
 export const DefaultButton = styled.button<ButtonStyleProps>`
   ${commonButtonStyles};
   ${commonButtonAnimate};
-  border: 1.3px solid ${Colors.PURPLE};
+  border: 1.3px solid ${(props) => (props.active ? Colors.PURPLE : Colors.TRANSPARENT)};
   // background: ${(props) => (props.active ? Colors.WHITE : Colors.TRANSPARENT)};
   color: ${(props) => (props.active ? Colors.WHITE : Colors.GRAY)};
 `;
