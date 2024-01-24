@@ -8,12 +8,15 @@ import TextEnum from "../../UI_KIT/Atoms/Text.atom/enum";
 import Filter from "./components/Filter/Filter";
 import CardItem from "./components/CardItem/CardItem";
 import { useQuery } from "react-query";
-import { Products, getProducts } from "@/app/business.InterfaceLayer/hooks/useQueryStore";
+import { getProducts } from "@/app/business.InterfaceLayer/hooks/useQueryStore";
+import { Products } from "@/app/business.InterfaceLayer/types";
+import { useCartStore } from "@/app/business.InterfaceLayer/store/cartStore";
 
 interface CardsBlockProps {}
 
 const CardsBlock: React.FC<CardsBlockProps> = () => {
   const { data: products, isLoading } = useQuery("products", getProducts);
+  const addToCart = useCartStore((state) => state.addToCart);
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -30,8 +33,8 @@ const CardsBlock: React.FC<CardsBlockProps> = () => {
       </ST.Header>
       <ST.CardsBlock>
         {products.map((product: Products) => (
-          <CardItem key={product.id} product={product} />
-        ))}
+          <CardItem key={product.id} product={product} addToCart={() => addToCart(product)} />
+          ))}
       </ST.CardsBlock>
     </ST.Container>
   );

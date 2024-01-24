@@ -13,6 +13,7 @@ import BasketIcon from "../../../../shared/assets/icons/shopping-cart.svg?react"
 import Colors from "../../../../constants/colors";
 import ButtonAtom from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom";
 import ButtonEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom/enum";
+import Link from "next/link";
 
 interface MenuMiddleProps {}
 
@@ -63,20 +64,22 @@ const MenuMiddle: React.FC<MenuMiddleProps> = () => {
               icon={<HeartIcon />}
               fill={Colors.BLACK}
             />
-            <ButtonAtom
-              type={ButtonEnum.enum_defaultButton}
-              background={Colors.TRANSPARENT}
-            >
-              <ImageAtom
-                type={ImageEnum.enum_defaultSvg}
-                icon={<BasketIcon />}
-                fill={Colors.PURPLE}
-                stroke={Colors.PURPLE}
-              />
-              <TextAtom margin="0 0 0 10px" type={TextEnum.enum_Text_H4}>
-                Корзина
-              </TextAtom>
-            </ButtonAtom>
+            <Link href="/basket">
+              <ButtonAtom
+                type={ButtonEnum.enum_defaultButton}
+                background={Colors.TRANSPARENT}
+              >
+                <ImageAtom
+                  type={ImageEnum.enum_defaultSvg}
+                  icon={<BasketIcon />}
+                  fill={Colors.PURPLE}
+                  stroke={Colors.PURPLE}
+                />
+                <TextAtom margin="0 0 0 10px" type={TextEnum.enum_Text_H4}>
+                  Корзина
+                </TextAtom>
+              </ButtonAtom>
+            </Link>
           </ST.ShopBox>
         </ST.Box>
       </div>

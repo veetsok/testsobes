@@ -11,13 +11,14 @@ import SpeedometerIcon from "../../../../shared/assets/icons/speedometer.svg?rea
 import TimerIcon from "../../../../shared/assets/icons/timer.svg?react";
 import CartIcon from "../../../../shared/assets/icons/shopping-cart.svg?react";
 import HeartIcon from "../../../../shared/assets/icons/heart.svg?react";
-import { Products } from "@/app/business.InterfaceLayer/hooks/useQueryStore";
+import { Products } from "@/app/business.InterfaceLayer/types";
 
 interface CardItemProps {
   product: Products;
+  addToCart: () => void;
 }
 
-const CardItem: React.FC<CardItemProps> = ({ product }) => {
+const CardItem: React.FC<CardItemProps> = ({ product, addToCart }) => {
   const { title, charge, horsepower, speed, chargeTime, actualPrice, priceSale, img } =
     product;
 
@@ -102,6 +103,7 @@ const CardItem: React.FC<CardItemProps> = ({ product }) => {
               <ImageAtom
                 type={ImageEnum.enum_defaultSvg}
                 icon={<CartIcon />}
+                onClick={addToCart}
                 fill={Colors.PURPLE}
                 border={`1.3px solid ${Colors.PURPLE}`}
                 $borderRadius="50%"
