@@ -33,7 +33,9 @@ const CardItem: React.FC<CardItemProps> = ({ product }) => {
         />
       </ST.CardItemImg>
       <ST.CardItemBox>
-        <TextAtom type={TextEnum.enum_Text_H5}>{title}</TextAtom>
+        <TextAtom type={TextEnum.enum_Text_H5} margin="0 0 21px 0">
+          {title}
+        </TextAtom>
         <ST.CardItemGrid>
           <ST.GridTextBox>
             <ImageAtom type={ImageEnum.enum_defaultSvg} icon={<AccumulatorIcon />} />

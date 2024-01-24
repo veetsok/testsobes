@@ -16,4 +16,6 @@ export interface TextStyleProps {
   fontSize?: ICommonComponentProps["fontSize"];
   fontWeight?: ICommonComponentProps["fontWeight"];
   textTransform?: ICommonComponentProps["textTransform"];
+  background?: ICommonComponentProps["background"];
+  $borderRadius?: ICommonComponentProps["borderRadius"];
 }
