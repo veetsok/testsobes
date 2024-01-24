@@ -1,7 +1,4 @@
 "use client";
-
-import { useQueryClient, useQuery } from "react-query";
-
 export interface Products {
   id: number;
   title: string;
@@ -25,21 +22,3 @@ export async function getProducts() {
   const data = await response.json();
   return data;
 }
-
-// const fetchProducts = async () => {
-//   const response = await fetch(`${baseUrl}`);
-//   const data = await response.json();
-//   return data;
-// };
-
-// export const useQueryStore = () => {
-//   const queryClient = useQueryClient();
-
-//   const { data: products, isLoading } = useQuery("products", fetchProducts, {
-//     onSuccess: (data) => {
-//       queryClient.setQueryData("products", data);
-//     },
-//   });
-
-//   return { products, isLoading };
-// };
