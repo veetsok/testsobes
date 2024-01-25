@@ -14,6 +14,7 @@ import Colors from "../../../../constants/colors";
 import ButtonAtom from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom";
 import ButtonEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom/enum";
 import Link from "next/link";
+import Logo from "@/app/user.InterfaceLayer/UI_KIT/Molecules/Logo/Logo";
 
 interface MenuMiddleProps {}
 
@@ -22,9 +23,7 @@ const MenuMiddle: React.FC<MenuMiddleProps> = () => {
     <ST.MenuMiddle>
       <div className={styles.container}>
         <ST.Box>
-          <ST.Logo>
-            <TextAtom type={TextEnum.enum_Text_H2}>Kugoo</TextAtom>
-          </ST.Logo>
+          <Logo />
 
           <ButtonAtom
             padding="8px 18px 9px 15px"

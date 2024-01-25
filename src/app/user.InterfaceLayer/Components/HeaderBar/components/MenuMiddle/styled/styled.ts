@@ -11,12 +11,6 @@ export const Box = styled.div`
   align-items: center;
 `;
 
-export const Logo = styled.div`
-  & h2 {
-    text-transform: uppercase;
-  }
-`;
-
 export const Search = styled.div``;
 
 export const MenuSearch = styled.input`
