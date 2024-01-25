@@ -64,6 +64,7 @@ const CardsBox: React.FC<CardsBoxProps> = ({ item }) => {
             type={ImageEnum.enum_defaultSvg}
             fill={Colors.GRAY}
             icon={<MinusIcon />}
+            cursor="pointer"
           />
           <TextAtom
             padding="8px 0"
@@ -81,11 +82,12 @@ const CardsBox: React.FC<CardsBoxProps> = ({ item }) => {
             type={ImageEnum.enum_defaultSvg}
             fill={Colors.GRAY}
             icon={<PlusIcon />}
+            cursor="pointer"
           />
         </ST.Quantity>
         <ST.PriceBlock>
           <TextAtom color={Colors.BLACK} type={TextEnum.enum_Text_H3}>
-            $123
+            $ 123 ₽
           </TextAtom>
           <ImageAtom
             margin="0 43px 0 0"
