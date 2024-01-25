@@ -91,7 +91,6 @@ const CardItem: React.FC<CardItemProps> = ({ product, addToCart }) => {
                 fontSize="12px"
                 fontWeight="500"
                 color={Colors.GRAY}
-                text-decoration-line={true}
               >
                 {actualPrice} ₽
               </TextAtom>

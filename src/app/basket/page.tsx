@@ -41,11 +41,13 @@ export default function Basket() {
               <ST.Box>
                 <ST.HeaderBox>
                   <TextAtom type={TextEnum.enum_Text_H6}>Товар</TextAtom>
-                  <TextAtom type={TextEnum.enum_Text_H6}>Количество</TextAtom>
-                  <TextAtom type={TextEnum.enum_Text_H6}>Сумма</TextAtom>
-                  <ButtonAtom type={ButtonEnum.enum_defaultButton}>
-                    Удалить все
-                  </ButtonAtom>
+                  <ST.HeaderBox2>
+                    <TextAtom type={TextEnum.enum_Text_H6}>Количество</TextAtom>
+                    <TextAtom type={TextEnum.enum_Text_H6}>Сумма</TextAtom>
+                    <ButtonAtom type={ButtonEnum.enum_defaultButton}>
+                      Удалить все
+                    </ButtonAtom>
+                  </ST.HeaderBox2>
                 </ST.HeaderBox>
                 <ST.CardsBox>
                   {items.map((item) => (
