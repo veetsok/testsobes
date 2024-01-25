@@ -12,10 +12,11 @@ import PlusIcon from "../../../user.InterfaceLayer/shared/assets/icons/plus.svg?
 import DeleteIcon from "../../../user.InterfaceLayer/shared/assets/icons/delete.svg?react";
 
 interface CardsBoxProps {
-  item: Products[];
+  item?: Products[];
+  onDelete?: () => void;
 }
 
-const CardsBox: React.FC<CardsBoxProps> = ({ item }) => {
+const CardsBox: React.FC<CardsBoxProps> = ({ item, onDelete }) => {
   const { title, img } = item;
 
   return (
@@ -93,6 +94,8 @@ const CardsBox: React.FC<CardsBoxProps> = ({ item }) => {
             margin="0 43px 0 0"
             type={ImageEnum.enum_defaultSvg}
             icon={<DeleteIcon />}
+            onClick={onDelete}
+            cursor="pointer"
           />
         </ST.PriceBlock>
       </ST.CardBlock2>

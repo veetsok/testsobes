@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "KugooKirin M4",
+    "title": "Kugoo Kirin M4",
     "charge": "2000 mAh",
     "horsepower": 1.2,
     "speed": 60,
@@ -16,7 +16,7 @@
   },
   {
     "id": 2,
-    "title": "KugooKirin M4 Pro",
+    "title": "Kugoo Kirin M4 Pro",
     "charge": "2000 mAh",
     "horsepower": 2,
     "speed": 45,

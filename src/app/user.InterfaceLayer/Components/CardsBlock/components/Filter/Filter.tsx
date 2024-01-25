@@ -6,12 +6,45 @@ import TextAtom from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Text.atom";
 import TextEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Text.atom/enum";
 import Colors from "@/app/user.InterfaceLayer/constants/colors";
 
-interface FilterProps {}
+interface FilterProps {
+  selectedFilter?: any;
+  setSelectedFilter?: any;
+  onFilterChange?: any;
+}
 
-const Filter: React.FC<FilterProps> = () => {
+const Filter: React.FC<FilterProps> = ({
+  onFilterChange,
+  selectedFilter,
+  setSelectedFilter,
+}) => {
+  const handleFilterClick = (filter: string) => {
+    setSelectedFilter(filter);
+    onFilterChange(filter);
+  };
+
   return (
     <ST.Filter>
-      <ButtonAtom type={ButtonEnum.enum_filterButton} margin="0 5px 0 0">
+      <ButtonAtom
+        type={ButtonEnum.enum_filterButton}
+        margin="0 5px 0 0"
+        onClick={() => onFilterChange("all")}
+        active={selectedFilter === "all"}
+      >
+        <TextAtom
+          type={TextEnum.enum_Text_H6}
+          fontSize="12px"
+          fontWeight="400"
+          color={Colors.GRAY}
+        >
+          Все
+        </TextAtom>
+      </ButtonAtom>
+      <ButtonAtom
+        type={ButtonEnum.enum_filterButton}
+        margin="0 5px 0 0"
+        onClick={() => handleFilterClick("hits")}
+        active={selectedFilter === "hits"}
+      >
         <TextAtom
           type={TextEnum.enum_Text_H6}
           fontSize="12px"
@@ -21,7 +54,12 @@ const Filter: React.FC<FilterProps> = () => {
           Хиты продаж
         </TextAtom>
       </ButtonAtom>
-      <ButtonAtom type={ButtonEnum.enum_filterButton} margin="0 5px 0 0">
+      <ButtonAtom
+        type={ButtonEnum.enum_filterButton}
+        margin="0 5px 0 0"
+        onClick={() => handleFilterClick("city")}
+        active={selectedFilter === "city"}
+      >
         <TextAtom
           type={TextEnum.enum_Text_H6}
           fontSize="12px"
@@ -31,7 +69,12 @@ const Filter: React.FC<FilterProps> = () => {
           Для города
         </TextAtom>
       </ButtonAtom>
-      <ButtonAtom type={ButtonEnum.enum_filterButton} margin="0 5px 0 0">
+      <ButtonAtom
+        type={ButtonEnum.enum_filterButton}
+        margin="0 5px 0 0"
+        onClick={() => handleFilterClick("adults")}
+        active={selectedFilter === "adults"}
+      >
         <TextAtom
           type={TextEnum.enum_Text_H6}
           fontSize="12px"
@@ -41,7 +84,11 @@ const Filter: React.FC<FilterProps> = () => {
           Для взрослых
         </TextAtom>
       </ButtonAtom>
-      <ButtonAtom type={ButtonEnum.enum_filterButton}>
+      <ButtonAtom
+        type={ButtonEnum.enum_filterButton}
+        onClick={() => handleFilterClick("children")}
+        active={selectedFilter === "children"}
+      >
         <TextAtom
           type={TextEnum.enum_Text_H6}
           fontSize="12px"

@@ -13,6 +13,7 @@ import CardHeader from "./components/CardHeader/CardHeader";
 
 export default function Basket() {
   const items = useCartStore((state) => state.items);
+  const deleteToCart = useCartStore((state) => state.removeFromCart);
 
   useEffect(() => {
     // Ensure that the store is properly initialized on the client side
@@ -41,7 +42,11 @@ export default function Basket() {
                 <CardHeader />
                 <ST.CardsBox>
                   {items.map((item) => (
-                    <CardsBox key={item.id} item={item} />
+                    <CardsBox
+                      key={item.id}
+                      item={item}
+                      onDelete={() => deleteToCart(item.id)}
+                    />
                   ))}
                 </ST.CardsBox>
               </ST.Box>

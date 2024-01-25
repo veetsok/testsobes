@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import * as ST from "./styled/styled";
 import styles from "../../../styles/page.module.css";
 import TextAtom from "../../UI_KIT/Atoms/Text.atom";
@@ -18,10 +18,34 @@ const CardsBlock: React.FC<CardsBlockProps> = () => {
   const { data: products, isLoading } = useQuery("products", getProducts);
   const addToCart = useCartStore((state) => state.addToCart);
 
+  const [selectedFilter, setSelectedFilter] = useState("all");
+
+  const handleFilterChange = (filter: string) => {
+    setSelectedFilter(filter);
+  };
+
   if (isLoading) {
     return <div>Loading...</div>;
   }
-  console.log(products);
+
+  // Filter products based on the selected filter
+  const filteredProducts =
+    selectedFilter !== "all"
+      ? products.filter((product: Products) => {
+          switch (selectedFilter) {
+            case "hits":
+              return product.productShieldHit;
+            case "city":
+              return product.forTown;
+            case "adults":
+              return product.forAdults;
+            case "children":
+              return product.forChildren;
+            default:
+              return true;
+          }
+        })
+      : products;
 
   return (
     <ST.Container className={styles.container}>
@@ -29,12 +53,20 @@ const CardsBlock: React.FC<CardsBlockProps> = () => {
         <TextAtom type={TextEnum.enum_Text_H1} textTransform="uppercase">
           Электросамокаты
         </TextAtom>
-        <Filter />
+        <Filter
+          onFilterChange={handleFilterChange}
+          selectedFilter={selectedFilter}
+          setSelectedFilter={setSelectedFilter}
+        />
       </ST.Header>
       <ST.CardsBlock>
-        {products.map((product: Products) => (
-          <CardItem key={product.id} product={product} addToCart={() => addToCart(product)} />
-          ))}
+        {filteredProducts.map((product: Products) => (
+          <CardItem
+            key={product.id}
+            product={product}
+            addToCart={() => addToCart(product)}
+          />
+        ))}
       </ST.CardsBlock>
     </ST.Container>
   );
