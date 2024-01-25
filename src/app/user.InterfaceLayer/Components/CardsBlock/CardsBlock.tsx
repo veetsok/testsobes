@@ -18,7 +18,7 @@ const CardsBlock: React.FC<CardsBlockProps> = () => {
   const { data: products, isLoading } = useQuery("products", getProducts);
   const addToCart = useCartStore((state) => state.addToCart);
 
-  const [selectedFilter, setSelectedFilter] = useState("all");
+  const [selectedFilter, setSelectedFilter] = useState("all"); // Initialize to "all"
 
   const handleFilterChange = (filter: string) => {
     setSelectedFilter(filter);
@@ -53,11 +53,7 @@ const CardsBlock: React.FC<CardsBlockProps> = () => {
         <TextAtom type={TextEnum.enum_Text_H1} textTransform="uppercase">
           Электросамокаты
         </TextAtom>
-        <Filter
-          onFilterChange={handleFilterChange}
-          selectedFilter={selectedFilter}
-          setSelectedFilter={setSelectedFilter}
-        />
+        <Filter onFilterChange={handleFilterChange} selectedFilter={selectedFilter} />
       </ST.Header>
       <ST.CardsBlock>
         {filteredProducts.map((product: Products) => (
