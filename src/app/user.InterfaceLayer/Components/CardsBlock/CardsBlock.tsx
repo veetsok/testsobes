@@ -18,7 +18,7 @@ const CardsBlock: React.FC<CardsBlockProps> = () => {
   const { data: products, isLoading } = useQuery("products", getProducts);
   const addToCart = useCartStore((state) => state.addToCart);
 
-  const [selectedFilter, setSelectedFilter] = useState("all"); // Initialize to "all"
+  const [selectedFilter, setSelectedFilter] = useState("all");
 
   const handleFilterChange = (filter: string) => {
     setSelectedFilter(filter);
@@ -28,7 +28,6 @@ const CardsBlock: React.FC<CardsBlockProps> = () => {
     return <div>Loading...</div>;
   }
 
-  // Filter products based on the selected filter
   const filteredProducts =
     selectedFilter !== "all"
       ? products.filter((product: Products) => {
