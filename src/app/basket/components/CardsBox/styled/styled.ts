@@ -7,7 +7,6 @@ export const Container = styled.div`
   justify-content: space-between;
 `;
 
-
 export const CardBlock = styled.div`
   display: flex;
   align-items: center;
@@ -19,3 +18,17 @@ export const Description = styled.div`
   flex-direction: column;
   gap: 7px;
 `;
+
+export const Bottom = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 18px;
+`;
+
+export const Status = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+`;
+
+export const Texs1 = styled.div``;

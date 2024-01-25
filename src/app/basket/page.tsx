@@ -32,7 +32,7 @@ export default function Basket() {
         >
           Моя корзина
         </TextAtom>
-        {items.length < 0 ? (
+        {items.length > 0 ? (
           <>
             <TextAtom type={TextEnum.enum_Text_H6} fontSize="14px" fontWeight="400">
               $sum товаров

@@ -1,5 +1,6 @@
 enum Colors {
   WHITE = "#FFF",
+  BG_IMG = "#F0F1F5",
   BLACK = "#282739",
   WHATSAPP = "#4CAF50",
   VIBER = "#7731A9",

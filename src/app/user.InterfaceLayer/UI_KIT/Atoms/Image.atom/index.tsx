@@ -21,7 +21,7 @@ const Image: React.FC<ImageType & ImageStyleProps> = (props) => {
   switch (type) {
     case ImageEnum.enum_srcImage: {
       return (
-        <ST.SrcImageBlock onClick={onClick} {...otherProps}>
+        <ST.SrcImageBlock background={background} onClick={onClick} {...otherProps}>
           <ST.SrcImage isLoading={isLoading} src={src} alt={alt} />
         </ST.SrcImageBlock>
       );

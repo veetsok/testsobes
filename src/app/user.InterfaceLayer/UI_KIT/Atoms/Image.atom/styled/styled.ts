@@ -6,6 +6,7 @@ import { commonImageStyles } from "../constants/commonButtonStyles";
 
 export const SrcImageBlock = styled.div<ImageStyleProps>`
   ${commonImageStyles};
+  background: ${(props) => props.background};
 `;
 
 export const SrcImage = styled.img<ImageStyleProps>`
