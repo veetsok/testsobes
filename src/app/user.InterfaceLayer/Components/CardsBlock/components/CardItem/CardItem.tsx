@@ -27,7 +27,7 @@ const CardItem: React.FC<CardItemProps> = ({ product, addToCart }) => {
       <ST.CardItemImg>
         <ImageAtom
           type={ImageEnum.enum_srcImage}
-          src={`${img[0]}`}
+          src={img[0]}
           alt={title}
           width="190px"
           height="180px"

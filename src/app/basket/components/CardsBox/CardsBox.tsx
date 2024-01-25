@@ -27,7 +27,7 @@ const CardsBox: React.FC<CardsBoxProps> = ({ item }) => {
           width="75px"
           height="75px"
           type={ImageEnum.enum_srcImage}
-          src={img}
+          src={img[0]}
           alt={title}
         />
         <ST.Description>
