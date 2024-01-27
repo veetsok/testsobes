@@ -102,10 +102,8 @@ const Equipment: React.FC<EquipmentProps> = () => {
             padding="27.5px 0"
             margin="0 20px 10px  0"
           >
-            <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
-              Стандартная 1 год
-            </TextAtom>
-            <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
+            <TextAtom type={TextEnum.enum_Text_H4}>Стандартная 1 год</TextAtom>
+            <TextAtom type={TextEnum.enum_Text_H6} fontSize="14px" color={Colors.GRAY}>
               Бесплатно
             </TextAtom>
           </ButtonAtom>
@@ -117,10 +115,8 @@ const Equipment: React.FC<EquipmentProps> = () => {
             padding="27.5px 0"
             margin="0 0 10px  0"
           >
-            <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
-              Расширенная 2 года
-            </TextAtom>
-            <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
+            <TextAtom type={TextEnum.enum_Text_H4}>Расширенная 2 года</TextAtom>
+            <TextAtom type={TextEnum.enum_Text_H6} fontSize="14px" color={Colors.GRAY}>
               2 990 руб.
             </TextAtom>
           </ButtonAtom>
@@ -140,10 +136,8 @@ const Equipment: React.FC<EquipmentProps> = () => {
             padding="27.5px 0"
             margin="0 20px 0  0"
           >
-            <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
-              Нет
-            </TextAtom>
-            <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
+            <TextAtom type={TextEnum.enum_Text_H4}>Нет</TextAtom>
+            <TextAtom type={TextEnum.enum_Text_H5}>
               <br />
             </TextAtom>
           </ButtonAtom>
@@ -154,10 +148,8 @@ const Equipment: React.FC<EquipmentProps> = () => {
             height="126px"
             padding="27.5px 0"
           >
-            <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
-              Настройка
-            </TextAtom>
-            <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
+            <TextAtom type={TextEnum.enum_Text_H4}>Настройка</TextAtom>
+            <TextAtom type={TextEnum.enum_Text_H6} fontSize="14px" color={Colors.GRAY}>
               1 520 руб.
             </TextAtom>
           </ButtonAtom>
@@ -169,10 +161,8 @@ const Equipment: React.FC<EquipmentProps> = () => {
             padding="27.5px 0"
             margin="20px 20px 10px 0"
           >
-            <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
-              Гидроизоляция
-            </TextAtom>
-            <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
+            <TextAtom type={TextEnum.enum_Text_H4}>Гидроизоляция</TextAtom>
+            <TextAtom type={TextEnum.enum_Text_H6} fontSize="14px" color={Colors.GRAY}>
               3 850 руб.
             </TextAtom>
           </ButtonAtom>
@@ -184,10 +174,10 @@ const Equipment: React.FC<EquipmentProps> = () => {
             padding="27.5px 0"
             margin="20px 0 10px 0"
           >
-            <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
+            <TextAtom type={TextEnum.enum_Text_H5} fontWeight="500">
               Гидроизоляция и настройка
             </TextAtom>
-            <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
+            <TextAtom type={TextEnum.enum_Text_H6} fontSize="14px" color={Colors.GRAY}>
               3 409 руб. (-30%)
             </TextAtom>
           </ButtonAtom>
