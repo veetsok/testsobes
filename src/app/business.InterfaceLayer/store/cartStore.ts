@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { create } from "zustand";
 import { Products } from "../types";
 
@@ -10,10 +11,24 @@ interface CartStore {
   clearCart: () => void;
 }
 
-export const useCartStore = create<CartStore>((set) => ({
-  items: [],
-  addToCart: (product) => set((state) => ({ items: [...state.items, product] })),
-  removeFromCart: (productId) =>
-    set((state) => ({ items: state.items.filter((item) => item.id !== productId) })),
-  clearCart: () => set({ items: [] }),
-}));
+export const useCartStore = create<CartStore>((set) => {
+  // Получаем данные из localStorage при инициализации состояния
+  const initialItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
+
+  return {
+    items: initialItems,
+    addToCart: (product) =>
+      set((state) => {
+        const updatedItems = [...state.items, product];
+        localStorage.setItem("cartItems", JSON.stringify(updatedItems)); // Обновляем localStorage
+        return { items: updatedItems };
+      }),
+    removeFromCart: (productId) =>
+      set((state) => {
+        const updatedItems = state.items.filter((item) => item.id !== productId);
+        localStorage.setItem("cartItems", JSON.stringify(updatedItems)); // Обновляем localStorage
+        return { items: updatedItems };
+      }),
+    clearCart: () => set({ items: [] }),
+  };
+});
