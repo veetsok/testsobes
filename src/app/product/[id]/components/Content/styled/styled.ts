@@ -20,6 +20,41 @@ export const MainBlock = styled.div`
   align-items: flex-start;
 `;
 
+export const Statistic = styled.div`
+  display: flex;
+  margin-bottom: 20px;
+`;
+
+export const Instock = styled.div`
+  align-items: center;
+  display: flex;
+`;
+
+export const Box = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 42px;
+`;
+
+export const PriceWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+`;
+
+export const PriceBox = styled.div`
+  display: flex;
+  margin: 31px 0;
+  gap: 81px;
+  & button {
+    & h6 {
+      text-align: left;
+    }
+  }
+`;
+
+export const PriceButton = styled.div``;
+
 export const Equipment = styled.div`
   display: flex;
   flex-direction: column;
@@ -32,4 +67,9 @@ export const BlockDefault = styled.div`
   justify-content: space-between;
   padding: 20px 0;
   border-bottom: 1px solid ${Colors.BG_CARD};
+`;
+
+export const TextContent = styled.div`
+  display: flex;
+  flex-direction: column;
 `;

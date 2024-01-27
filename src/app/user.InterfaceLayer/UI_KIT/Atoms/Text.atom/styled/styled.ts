@@ -8,6 +8,7 @@ import { TextStyleProps } from "../type";
 
 export const H1 = styled.h1<TextStyleProps>`
   ${commonTextStyles};
+  text-decoration: ${(props) => props.$textDecoration};
   font-family: ${commonTextFonts[TextEnum.enum_Text_H1].fontFamily};
   font-size: ${commonTextFonts[TextEnum.enum_Text_H1].fontSize};
   font-style: ${commonTextFonts[TextEnum.enum_Text_H1].fontStyle};
@@ -17,6 +18,7 @@ export const H1 = styled.h1<TextStyleProps>`
 
 export const H2 = styled.h2<TextStyleProps>`
   ${commonTextStyles};
+  text-decoration: ${(props) => props.$textDecoration};
   font-family: ${commonTextFonts[TextEnum.enum_Text_H2].fontFamily};
   font-size: ${commonTextFonts[TextEnum.enum_Text_H2].fontSize};
   font-style: ${commonTextFonts[TextEnum.enum_Text_H2].fontStyle};
@@ -25,6 +27,7 @@ export const H2 = styled.h2<TextStyleProps>`
 `;
 export const H3 = styled.h3<TextStyleProps>`
   ${commonTextStyles};
+  text-decoration: ${(props) => props.$textDecoration};
   font-family: ${commonTextFonts[TextEnum.enum_Text_H3].fontFamily};
   font-size: ${commonTextFonts[TextEnum.enum_Text_H3].fontSize};
   font-style: ${commonTextFonts[TextEnum.enum_Text_H3].fontStyle};
@@ -33,6 +36,7 @@ export const H3 = styled.h3<TextStyleProps>`
 `;
 export const H4 = styled.h4<TextStyleProps>`
   ${commonTextStyles};
+  text-decoration: ${(props) => props.$textDecoration};
   font-family: ${commonTextFonts[TextEnum.enum_Text_H4].fontFamily};
   font-size: ${commonTextFonts[TextEnum.enum_Text_H4].fontSize};
   font-style: ${commonTextFonts[TextEnum.enum_Text_H4].fontStyle};
@@ -42,6 +46,7 @@ export const H4 = styled.h4<TextStyleProps>`
 
 export const H5 = styled.h5<TextStyleProps>`
   ${commonTextStyles};
+  text-decoration: ${(props) => props.$textDecoration};
   font-family: ${commonTextFonts[TextEnum.enum_Text_H5].fontFamily};
   font-size: ${commonTextFonts[TextEnum.enum_Text_H5].fontSize};
   font-style: ${commonTextFonts[TextEnum.enum_Text_H5].fontStyle};
@@ -50,6 +55,7 @@ export const H5 = styled.h5<TextStyleProps>`
 `;
 export const H6 = styled.h6<TextStyleProps>`
   ${commonTextStyles};
+  text-decoration: ${(props) => props.$textDecoration};
   font-family: ${commonTextFonts[TextEnum.enum_Text_H6].fontFamily};
   font-size: ${(props) => props.fontSize};
   font-style: ${commonTextFonts[TextEnum.enum_Text_H6].fontStyle};

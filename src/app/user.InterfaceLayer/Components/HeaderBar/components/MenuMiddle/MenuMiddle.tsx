@@ -7,7 +7,7 @@ import ImageAtom from "../../../../UI_KIT/Atoms/Image.atom";
 import ImageEnum from "../../../../UI_KIT/Atoms/Image.atom/enum";
 import BurgerIcon from "../../../../shared/assets/icons/menumiddle/burger.svg?react";
 import SearchIcon from "../../../../shared/assets/icons/menumiddle/search.svg?react";
-import BalanceIcon from "../../../../shared/assets/icons/menumiddle/balance.svg?react";
+import BalanceIcon from "../../../../shared/assets/icons/balance.svg?react";
 import HeartIcon from "../../../../shared/assets/icons/heart.svg?react";
 import BasketIcon from "../../../../shared/assets/icons/shopping-cart.svg?react";
 import Colors from "../../../../constants/colors";

@@ -8,6 +8,7 @@ export interface TextType extends ICommonComponentProps, TextStyleProps {
   href?: string | undefined;
 }
 export interface TextStyleProps {
+  display?: ICommonComponentProps["display"];
   isLoading?: ICommonComponentProps["isLoading"];
   color?: ICommonComponentProps["width"];
   width?: ICommonComponentProps["border"];
@@ -20,4 +21,5 @@ export interface TextStyleProps {
   textTransform?: ICommonComponentProps["textTransform"];
   background?: ICommonComponentProps["background"];
   $borderRadius?: ICommonComponentProps["borderRadius"];
+  $textDecoration?: ICommonComponentProps["textDecoration"];
 }

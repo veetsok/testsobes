@@ -16,6 +16,7 @@ export enum CommonComponentsProps {
   color = "color",
   colorActive = "colorActive",
   cursor = "cursor",
+  display = "display",
   disabled = "disabled",
   fill = "fill",
   stroke = "stroke",
@@ -42,6 +43,7 @@ export enum CommonComponentsProps {
   src = "src",
   top = "top",
   textTransform = "textTransform",
+  textDecoration = "textDecoration",
   value = "value",
   width = "width",
 }
@@ -63,6 +65,7 @@ export interface ICommonComponentProps {
   [CommonComponentsProps.colorActive]?: string;
   [CommonComponentsProps.cursor]?: string;
   [CommonComponentsProps.disabled]?: boolean;
+  [CommonComponentsProps.display]?: string;
   [CommonComponentsProps.fill]?: string;
   [CommonComponentsProps.stroke]?: string;
   [CommonComponentsProps.height]?: string;
@@ -88,6 +91,7 @@ export interface ICommonComponentProps {
   [CommonComponentsProps.src]?: string;
   [CommonComponentsProps.top]?: string;
   [CommonComponentsProps.textTransform]?: string;
+  [CommonComponentsProps.textDecoration]?: string;
   [CommonComponentsProps.value]?: string | number | undefined;
   [CommonComponentsProps.width]?: string;
 }

@@ -6,6 +6,7 @@ export const commonTextStyles = css<TextStyleProps>`
   overflow: hidden;
   margin: 0;
   white-space: normal;
+  display: ${(props) => props.display};
   color: ${(props) => props.color};
   width: ${(props) => props.width};
   background: ${(props) => props.background};
