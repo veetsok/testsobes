@@ -63,7 +63,7 @@ const ColorsBlock: React.FC<ColorsBlockProps> = () => {
         width="227px"
         height="126px"
         padding="27.5px 0"
-        margin="20px 20px 0  0"
+        margin="20px 0 0  0"
       >
         <ImageAtom type={ImageEnum.enum_defaultSvg} icon={<RedIcon />} />
         <TextAtom type={TextEnum.enum_Text_H4} color={Colors.BLACK}>
