@@ -11,11 +11,12 @@ import BalanceIcon from "../../../../user.InterfaceLayer/shared/assets/icons/bal
 import ButtonAtom from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom";
 import ButtonEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom/enum";
 import { ContentProps } from "./type";
+import Equipment from "./components/Equipment/Equipment";
 
 const Content: React.FC<ContentProps> = ({ product }) => {
   return (
     <ST.Content>
-      IMG
+      <ST.ImageBlock>Img</ST.ImageBlock>
       <ST.ContentText>
         <ST.MainBlock>
           <TextAtom
@@ -139,15 +140,7 @@ const Content: React.FC<ContentProps> = ({ product }) => {
             </ST.PriceWrapper>
           </ButtonAtom>
         </ST.PriceBox>
-        <ST.Equipment>
-          <ST.BlockDefault>
-            <ST.TextContent>
-              <TextAtom type={TextEnum.enum_Text_H6}>Комплектация</TextAtom>
-              <TextAtom type={TextEnum.enum_Text_H5}>Базовая</TextAtom>
-            </ST.TextContent>
-            <TextAtom type={TextEnum.enum_Text_A1}>Изменить</TextAtom>
-          </ST.BlockDefault>
-        </ST.Equipment>
+        <Equipment />
       </ST.ContentText>
     </ST.Content>
   );

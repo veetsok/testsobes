@@ -23,6 +23,14 @@ export const FilterButton = styled.button<ButtonStyleProps>`
   color: ${(props) => (props.active ? Colors.PURPLE : Colors.GRAY)};
 `;
 
+export const EquipmentButton = styled.button<ButtonStyleProps>`
+  ${commonButtonStyles};
+  ${commonButtonAnimate};
+  border-radius: 10px;
+  border: 2px solid ${(props) => (props.active ? Colors.PURPLE : Colors.BG_CARD)};
+  background: Colors.TRANSPARENT;
+`;
+
 export const Button = styled.div<ButtonStyleProps>`
   ${commonButtonStyles};
   border: 2px solid ${Colors.RED};

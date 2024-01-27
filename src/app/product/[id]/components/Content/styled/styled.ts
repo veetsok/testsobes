@@ -9,6 +9,13 @@ export const Content = styled.div`
   margin-bottom: 100px;
 `;
 
+export const ImageBlock = styled.div`
+  height: 506px;
+  margin-right: 64px;
+  margin-top: 77px;
+  width: 570px;
+`;
+
 export const ContentText = styled.div`
   display: flex;
   flex-direction: column;
