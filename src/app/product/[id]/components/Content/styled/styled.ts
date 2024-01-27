@@ -5,7 +5,6 @@ export const Content = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 64px;
   margin-bottom: 100px;
 `;
 
@@ -19,6 +18,7 @@ export const ImageBlock = styled.div`
 export const ContentText = styled.div`
   display: flex;
   flex-direction: column;
+  width: 475px;
 `;
 
 export const MainBlock = styled.div`

@@ -52,3 +52,31 @@ export const GiftBox = styled.div`
     margin-left: 16px;
   }
 `;
+
+export const Total = styled.div`
+  background: ${Colors.BG_BUTTON};
+  padding: 27px 31px 28px 30px;
+  border-radius: 10px;
+  margin: 30px 0 20px 0;
+`;
+
+export const TotalHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 53px;
+`;
+
+export const TotalDesc = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+  & h5 {
+    max-width: 249px;
+  }
+`;
+
+export const TotalDescText = styled.div`
+  max-width: 249px;
+`;

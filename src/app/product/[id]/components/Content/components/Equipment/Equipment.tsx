@@ -3,14 +3,14 @@ import * as ST from "./styled/styled";
 import TextAtom from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Text.atom";
 import TextEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Text.atom/enum";
 import QuestionIcon from "../../../../../../user.InterfaceLayer/shared/assets/icons/questionCircle.svg?react";
+import HeartIcon from "../../../../../../user.InterfaceLayer/shared/assets/icons/heart.svg?react";
+import DeliveryIcon from "../../../../../../user.InterfaceLayer/shared/assets/icons/delivery_truck.svg?react";
 import ButtonAtom from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom";
 import ButtonEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom/enum";
 import ImageAtom from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Image.atom";
 import ImageEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Image.atom/enum";
 import Colors from "@/app/user.InterfaceLayer/constants/colors";
-import PinkIcon from "../../../../../../user.InterfaceLayer/shared/assets/icons/pink.svg?react";
-import BlueIcon from "../../../../../../user.InterfaceLayer/shared/assets/icons/blue.svg?react";
-import RedIcon from "../../../../../../user.InterfaceLayer/shared/assets/icons/red.svg?react";
+import ColorsBlock from "./ColorsBlock/ColorsBlock";
 
 interface EquipmentProps {}
 
@@ -242,68 +242,63 @@ const Equipment: React.FC<EquipmentProps> = () => {
         </ST.BlockDefault>
       </ST.GiftBlock>
       <ST.BlockDefault>
-        <div>
-          <ButtonAtom
-            type={ButtonEnum.enum_equipmentButton}
-            display="inline-block"
-            width="227px"
-            height="126px"
-            padding="27.5px 0"
-            margin="20px 20px 0  0"
-          >
-            <TextAtom
-              type={TextEnum.enum_Text_H4}
-              margin="0 0 -10px 0"
-              color={Colors.BLACK}
-            >
-              Без упаковки
-            </TextAtom>
-          </ButtonAtom>
-          <ButtonAtom
-            type={ButtonEnum.enum_equipmentButton}
-            display="inline-block"
-            width="227px"
-            height="126px"
-            padding="27.5px 0"
-            margin="20px 0 0  0"
-          >
-            <ImageAtom type={ImageEnum.enum_defaultSvg} icon={<PinkIcon />} />
-            <TextAtom type={TextEnum.enum_Text_H4} color={Colors.BLACK}>
-              Розовый
-            </TextAtom>
-          </ButtonAtom>
-          <ButtonAtom
-            type={ButtonEnum.enum_equipmentButton}
-            display="inline-block"
-            width="227px"
-            height="126px"
-            padding="27.5px 0"
-            margin="20px 20px 0  0"
-          >
-            <ImageAtom
-              type={ImageEnum.enum_defaultSvg}
-              fill={Colors.PURPLE}
-              icon={<BlueIcon />}
-            />
-            <TextAtom type={TextEnum.enum_Text_H4} color={Colors.BLACK}>
-              Синий
-            </TextAtom>
-          </ButtonAtom>
-          <ButtonAtom
-            type={ButtonEnum.enum_equipmentButton}
-            display="inline-block"
-            width="227px"
-            height="126px"
-            padding="27.5px 0"
-            margin="20px 20px 0  0"
-          >
-            <ImageAtom type={ImageEnum.enum_defaultSvg} icon={<RedIcon />} />
-            <TextAtom type={TextEnum.enum_Text_H4} color={Colors.BLACK}>
-              Красный
-            </TextAtom>
-          </ButtonAtom>
-        </div>
+        <ColorsBlock />
       </ST.BlockDefault>
+      <ST.Total>
+        <ST.TotalHeader>
+          <TextAtom type={TextEnum.enum_Text_H1}>45 900 руб.</TextAtom>
+          <ImageAtom
+            cursor="pointer"
+            type={ImageEnum.enum_defaultSvg}
+            fill={Colors.PURPLE}
+            border={`1.3px solid ${Colors.BG_CARD}`}
+            padding="10px"
+            $borderRadius="50%"
+            icon={<HeartIcon />}
+          />
+        </ST.TotalHeader>
+        <ST.TotalDesc>
+          <ImageAtom type={ImageEnum.enum_defaultSvg} icon={<DeliveryIcon />} />
+          <ST.TotalDescText>
+            <TextAtom type={TextEnum.enum_Text_H5} fontWeight="500">
+              Бесплатная доставка по РФ{`\u0020`}
+            </TextAtom>
+            <TextAtom type={TextEnum.enum_Text_H5}>от 1 дня при заказе до 01.09</TextAtom>
+          </ST.TotalDescText>
+        </ST.TotalDesc>
+        <ButtonAtom
+          width="197px"
+          $borderRadius="5px"
+          background={Colors.PURPLE}
+          padding="15px 25px"
+          margin="0 20px 0 0"
+          type={ButtonEnum.enum_defaultButton}
+        >
+          <TextAtom color={Colors.WHITE} type={TextEnum.enum_Text_H5}>
+            Купить в 1 клик
+          </TextAtom>
+        </ButtonAtom>
+        <ButtonAtom
+          width="197px"
+          $borderRadius="5px"
+          border={`1.3px solid ${Colors.PURPLE}`}
+          padding="15px 25px"
+          type={ButtonEnum.enum_defaultButton}
+        >
+          <TextAtom type={TextEnum.enum_Text_H5} color={Colors.PURPLE}>
+            Добавить в корзину
+          </TextAtom>
+        </ButtonAtom>
+      </ST.Total>
+      <ButtonAtom
+        type={ButtonEnum.enum_defaultButton}
+        margin="20px auto 0 auto"
+        display="block"
+      >
+        <TextAtom type={TextEnum.enum_Text_A1} color={Colors.PURPLE}>
+          Хотите купить позже?
+        </TextAtom>
+      </ButtonAtom>
     </ST.Equipment>
   );
 };
