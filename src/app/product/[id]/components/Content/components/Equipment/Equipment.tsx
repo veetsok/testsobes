@@ -97,7 +97,7 @@ const Equipment: React.FC<EquipmentProps> = () => {
             width="227px"
             height="126px"
             padding="27.5px 0"
-            margin="0 20px 0  0"
+            margin="0 20px 10px  0"
           >
             <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
               Стандартная 1 год
@@ -111,8 +111,8 @@ const Equipment: React.FC<EquipmentProps> = () => {
             display="inline-block"
             width="227px"
             height="126px"
-            height="126px"
             padding="27.5px 0"
+            margin="0 0 10px  0"
           >
             <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
               Расширенная 2 года
@@ -164,7 +164,7 @@ const Equipment: React.FC<EquipmentProps> = () => {
             width="227px"
             height="126px"
             padding="27.5px 0"
-            margin="20px 20px 0 0"
+            margin="20px 20px 10px 0"
           >
             <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
               Гидроизоляция
@@ -179,7 +179,7 @@ const Equipment: React.FC<EquipmentProps> = () => {
             width="227px"
             height="126px"
             padding="27.5px 0"
-            margin="20px 0 0 0"
+            margin="20px 0 10px 0"
           >
             <TextAtom type={TextEnum.enum_Text_H5} color={Colors.BLACK}>
               Гидроизоляция и настройка
@@ -190,6 +190,54 @@ const Equipment: React.FC<EquipmentProps> = () => {
           </ButtonAtom>
         </ST.Equipment>
       </ST.BlockDefault>
+      <ST.Border></ST.Border>
+      <ST.BlockDefault>
+        <TextAtom margin="10px 0 20px 0 " type={TextEnum.enum_Text_H5} fontWeight="500">
+          Подарочная упаковка
+        </TextAtom>
+        <div>
+          <TextAtom margin="10px 0 20px 0 " type={TextEnum.enum_Text_H5} fontWeight="500">
+            До конца акции
+          </TextAtom>
+          <TextAtom
+            margin="10px 0 20px 0 "
+            type={TextEnum.enum_Text_H5}
+            fontWeight="500"
+            color={Colors.GRAY}
+          >
+            06:34:23:02
+          </TextAtom>
+        </div>
+      </ST.BlockDefault>
+      <ST.GiftBlock>
+        <TextAtom
+          margin="10px 0 20px 0 "
+          type={TextEnum.enum_Text_H6}
+          fontSize="16px"
+          fontWeight="500"
+        >
+          2 подарка при покупке
+        </TextAtom>
+        <ST.BlockDefault>
+          <ST.GiftBox>
+            <ImageAtom
+              width="46px"
+              height="46px"
+              type={ImageEnum.enum_srcImage}
+              src="../../img/bookIcon.png"
+            />
+            <TextAtom type={TextEnum.enum_Text_H6} fontSize="12px">
+              Книга «6 вопросов об электротранспорте, на которые вы должны знать ответ».
+            </TextAtom>
+          </ST.GiftBox>
+          <ST.GiftBox>
+            <ImageAtom type={ImageEnum.enum_srcImage} src="../../img/stand.png" />
+            <TextAtom type={TextEnum.enum_Text_H6} fontSize="12px">
+              Универсальный держатель для телефона
+            </TextAtom>
+          </ST.GiftBox>
+        </ST.BlockDefault>
+      </ST.GiftBlock>
     </ST.Equipment>
   );
 };
