@@ -1,5 +1,6 @@
 import { css } from "styled-components";
 import { TextStyleProps } from "../../type";
+import Colors from "@/app/user.InterfaceLayer/constants/colors";
 
 export const commonTextStyles = css<TextStyleProps>`
   text-overflow: ellipsis;
@@ -7,7 +8,7 @@ export const commonTextStyles = css<TextStyleProps>`
   margin: 0;
   white-space: normal;
   display: ${(props) => props.display};
-  color: ${(props) => props.color};
+  color: ${(props) => (props.color ? props.color : Colors.BLACK)};
   width: ${(props) => props.width};
   background: ${(props) => props.background};
   border: ${(props) => props.border};
@@ -15,6 +16,5 @@ export const commonTextStyles = css<TextStyleProps>`
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
   text-align: ${(props) => props.align};
-  color: ${(props) => props.color};
   text-transform: ${(props) => props.textTransform};
 `;

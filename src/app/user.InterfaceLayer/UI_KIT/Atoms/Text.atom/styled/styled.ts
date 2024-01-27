@@ -40,7 +40,7 @@ export const H4 = styled.h4<TextStyleProps>`
   font-family: ${commonTextFonts[TextEnum.enum_Text_H4].fontFamily};
   font-size: ${commonTextFonts[TextEnum.enum_Text_H4].fontSize};
   font-style: ${commonTextFonts[TextEnum.enum_Text_H4].fontStyle};
-  font-weight: ${(props) => props.fontWeight};
+  font-weight: ${(props) => (props.fontWeight ? props.fontWeight : "500")};
   line-height: ${commonTextFonts[TextEnum.enum_Text_H4].lineHeight};
 `;
 
@@ -50,7 +50,7 @@ export const H5 = styled.h5<TextStyleProps>`
   font-family: ${commonTextFonts[TextEnum.enum_Text_H5].fontFamily};
   font-size: ${commonTextFonts[TextEnum.enum_Text_H5].fontSize};
   font-style: ${commonTextFonts[TextEnum.enum_Text_H5].fontStyle};
-  font-weight: ${(props) => props.fontWeight};
+  font-weight: ${(props) => (props.fontWeight ? props.fontWeight : "400")};
   line-height: ${commonTextFonts[TextEnum.enum_Text_H5].lineHeight};
 `;
 export const H6 = styled.h6<TextStyleProps>`
@@ -59,7 +59,7 @@ export const H6 = styled.h6<TextStyleProps>`
   font-family: ${commonTextFonts[TextEnum.enum_Text_H6].fontFamily};
   font-size: ${(props) => props.fontSize};
   font-style: ${commonTextFonts[TextEnum.enum_Text_H6].fontStyle};
-  font-weight: ${(props) => props.fontWeight};
+  font-weight: ${(props) => (props.fontWeight ? props.fontWeight : "400")};
   line-height: ${commonTextFonts[TextEnum.enum_Text_H6].lineHeight};
 `;
 

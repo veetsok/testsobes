@@ -14,12 +14,21 @@ export const EquipmentList = styled.div`
   flex-wrap: wrap;
 `;
 
+export const Border = styled.div`
+  background: ${Colors.BG_CARD};
+  width: 100%;
+  height: 1px;
+  margin: 20px 0;
+`;
+
+export const Tire = styled.div`
+  display: flex;
+`;
+
 export const BlockDefault = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
-  border-bottom: 1px solid ${Colors.BG_CARD};
 `;
 
 export const TextContent = styled.div`

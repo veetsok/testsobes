@@ -3,7 +3,7 @@ import { css } from "styled-components";
 import { ButtonStyleProps } from "../../type";
 
 export const commonButtonStyles = css<ButtonStyleProps>`
-  display: inline-flex;
+  display: ${(props) => (props.display ? props.display : "inline-flex")};
   justify-content: center;
   align-items: center;
   cursor: pointer;

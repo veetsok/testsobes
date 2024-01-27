@@ -28,7 +28,7 @@ export const EquipmentButton = styled.button<ButtonStyleProps>`
   ${commonButtonAnimate};
   border-radius: 10px;
   border: 2px solid ${(props) => (props.active ? Colors.PURPLE : Colors.BG_CARD)};
-  background: Colors.TRANSPARENT;
+  background: ${Colors.TRANSPARENT};
 `;
 
 export const Button = styled.div<ButtonStyleProps>`
