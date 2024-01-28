@@ -1,11 +1,11 @@
 "use client";
 
 import { create } from "zustand";
-import { Items, Products } from "../types";
+import { Items } from "../types";
 
 interface CartStore {
   items: Items[];
-  addToCart: (product: Products) => void;
+  addToCart: (product: Items) => void;
   removeFromCart: (productId: number) => void;
   removeItem: (productId: number) => void;
   clearCart: () => void;

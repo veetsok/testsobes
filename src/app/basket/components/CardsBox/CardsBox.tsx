@@ -14,7 +14,7 @@ import DeleteIcon from "../../../user.InterfaceLayer/shared/assets/icons/delete.
 interface CardsBoxProps {
   item: Items;
   onDelete: () => void;
-  addToCart: (product: Products) => void;
+  addToCart: (product: Items) => void;
   removeItem: (productId: number) => void;
 }
 

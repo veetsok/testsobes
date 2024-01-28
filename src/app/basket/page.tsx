@@ -16,12 +16,12 @@ export default function Basket() {
   const deleteToCart = useCartStore((state) => state.removeFromCart);
 
   useEffect(() => {
-    // Ensure that the store is properly initialized on the client side
     useCartStore.getState();
   }, []);
 
   const addToCart = useCartStore((state) => state.addToCart);
   const removeItem = useCartStore((state) => state.removeItem);
+  const clearCart = useCartStore((state) => state.clearCart);
 
   console.log(items);
 
@@ -42,7 +42,7 @@ export default function Basket() {
             </TextAtom>
             <ST.Basket>
               <ST.Box>
-                <CardHeader />
+                <CardHeader clearCart={clearCart} />
                 <ST.CardsBox>
                   {items.map((item) => (
                     <CardsBox
