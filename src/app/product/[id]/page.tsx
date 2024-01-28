@@ -3,7 +3,6 @@
 import React from "react";
 import styles from "../../styles/page.module.css";
 import * as ST from "./styled/styled";
-
 import { useQuery } from "react-query";
 import { getProducts } from "@/app/business.InterfaceLayer/hooks/useQueryStore";
 import { useParams } from "next/navigation";
@@ -24,7 +23,9 @@ const ProductPage: React.FC<ProductPageProps> = () => {
       {isLoading ? (
         <div>Loading...</div>
       ) : product ? (
-        <Content product={product} />
+        <>
+          <Content product={product} />
+        </>
       ) : (
         <TextAtom type={TextEnum.enum_Text_H2}>Product not found</TextAtom>
       )}

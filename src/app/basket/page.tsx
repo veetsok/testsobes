@@ -10,6 +10,7 @@ import PayBlock from "./components/PayBlock/PayBlock";
 import CardsBox from "./components/CardsBox/CardsBox";
 import EmptyBlock from "./components/EmptyBlock/EmptyBlock";
 import CardHeader from "./components/CardHeader/CardHeader";
+import Routing from "../user.InterfaceLayer/UI_KIT/Molecules/Routing/Routing";
 
 export default function Basket() {
   const items = useCartStore((state) => state.items);
@@ -31,6 +32,7 @@ export default function Basket() {
   return (
     <main>
       <ST.Container className={styles.container}>
+        <Routing childrenText="Главная / Каталог / Моя корзина" />
         <TextAtom
           margin="49px 0 40px 0"
           type={TextEnum.enum_Text_H1}
