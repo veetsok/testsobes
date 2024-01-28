@@ -12,11 +12,14 @@ import ButtonAtom from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom";
 import ButtonEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom/enum";
 import { ContentProps } from "./type";
 import Equipment from "./components/Equipment/Equipment";
+import ImageContentBox from "./components/ImageContentBox/ImageContentBox";
 
 const Content: React.FC<ContentProps> = ({ product }) => {
   return (
     <ST.Content>
-      <ST.ImageBlock>Img</ST.ImageBlock>
+      <ST.ImageBlock>
+        <ImageContentBox product={product} />
+      </ST.ImageBlock>
       <ST.ContentText>
         <ST.MainBlock>
           <TextAtom
