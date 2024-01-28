@@ -13,6 +13,11 @@ import CartIcon from "../../../../shared/assets/icons/shopping-cart.svg?react";
 import HeartIcon from "../../../../shared/assets/icons/heart.svg?react";
 import { Products } from "@/app/business.InterfaceLayer/types";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
 
 interface CardItemProps {
   product: Products;
@@ -35,15 +40,29 @@ const CardItem: React.FC<CardItemProps> = ({ product, addToCart }) => {
   return (
     <ST.CardItem>
       <ST.CardItemImg>
-        <Link href={`/product/${id}`}>
-          <ImageAtom
-            type={ImageEnum.enum_srcImage}
-            src={img[0]}
-            alt={title}
-            width="190px"
-            height="180px"
-          />
-        </Link>
+        <Swiper
+          className="mySwiper"
+          spaceBetween={10}
+          slidesPerView={1}
+          navigation={true}
+          modules={[Navigation]}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 5000 }}
+        >
+          {img.map((image, index) => (
+            <SwiperSlide key={index}>
+              <Link href={`/product/${id}`}>
+                <ImageAtom
+                  type={ImageEnum.enum_srcImage}
+                  src={image}
+                  alt={title}
+                  width="190px"
+                  height="180px"
+                />
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </ST.CardItemImg>
       <ST.CardItemBox>
         <TextAtom type={TextEnum.enum_Text_H5} margin="0 0 21px 0">

@@ -17,6 +17,30 @@ export const CardItemImg = styled.div`
   background: rgb(240, 241, 245);
   padding: 27px 0 22px 0;
   border-radius: 10px 10px 0 0;
+  .swiper-button-next {
+    &::after {
+      background-color: ${Colors.WHITE};
+      border: none;
+      border-radius: 50%;
+      padding: 14px;
+      outline: none;
+      color: ${Colors.PURPLE};
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
+  .swiper-button-prev {
+    &::after {
+      background-color: ${Colors.WHITE};
+      border: none;
+      border-radius: 50%;
+      padding: 14px;
+      outline: none;
+      color: ${Colors.PURPLE};
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
 `;
 
 export const CardItemBox = styled.div`
