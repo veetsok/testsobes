@@ -100,7 +100,7 @@ const CardsBox: React.FC<CardsBoxProps> = ({ item, onDelete, addToCart, removeIt
         </ST.Quantity>
         <ST.PriceBlock>
           <TextAtom color={Colors.BLACK} type={TextEnum.enum_Text_H3}>
-            {sumProduct} ₽
+            {sumProduct.toLocaleString()} ₽
           </TextAtom>
           <ImageAtom
             margin="0 43px 0 0"

@@ -5,10 +5,15 @@ import TextEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Text.atom/enum";
 import Colors from "@/app/user.InterfaceLayer/constants/colors";
 import ButtonAtom from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom";
 import ButtonEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom/enum";
-import { Checkbox, Col } from "antd";
-interface PayBlockProps {}
+import { Checkbox } from "antd";
 
-const PayBlock: React.FC<PayBlockProps> = () => {
+interface PayBlockProps {
+  totalSumProduct?: any;
+}
+
+const PayBlock: React.FC<PayBlockProps> = ({ totalSumProduct }) => {
+  const discont = 8000;
+
   return (
     <ST.Container>
       <ST.Basket>
@@ -21,7 +26,7 @@ const PayBlock: React.FC<PayBlockProps> = () => {
           Итого
         </TextAtom>
         <TextAtom margin="0 0 11px 0" color={Colors.BLACK} type={TextEnum.enum_Text_H2}>
-          $Summa ₽
+          {totalSumProduct} ₽
         </TextAtom>
 
         <ST.Cost>
@@ -36,7 +41,7 @@ const PayBlock: React.FC<PayBlockProps> = () => {
                 Стоимость товаров
               </TextAtom>
               <TextAtom color={Colors.BLACK} type={TextEnum.enum_Text_H5}>
-                $Общая стоимость ₽
+                {totalSumProduct.toLocaleString()} ₽
               </TextAtom>
             </ST.CostBlock>
           </ST.Title>
@@ -50,7 +55,7 @@ const PayBlock: React.FC<PayBlockProps> = () => {
               Сумма скидки
             </TextAtom>
             <TextAtom color={Colors.BLACK} type={TextEnum.enum_Text_H5}>
-              $Сумма скидки ₽
+              {discont.toLocaleString()} ₽
             </TextAtom>
           </ST.CostBlock>
           <ST.CostBlock>
@@ -63,7 +68,7 @@ const PayBlock: React.FC<PayBlockProps> = () => {
               Итого без учета доставки
             </TextAtom>
             <TextAtom color={Colors.BLACK} type={TextEnum.enum_Text_H5}>
-              $доставка ₽
+              {(totalSumProduct - discont).toLocaleString()} ₽
             </TextAtom>
           </ST.CostBlock>
           <ST.SubTitle></ST.SubTitle>

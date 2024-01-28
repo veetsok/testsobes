@@ -25,6 +25,9 @@ export default function Basket() {
 
   console.log(items);
 
+  const totalItems = items.reduce((total, item) => total + item.quantity, 0);
+  const totalSumProduct = items.reduce((total, item) => total + item.sumProduct, 0);
+
   return (
     <main>
       <ST.Container className={styles.container}>
@@ -38,7 +41,7 @@ export default function Basket() {
         {items.length > 0 ? (
           <>
             <TextAtom type={TextEnum.enum_Text_H6} fontSize="14px" fontWeight="400">
-              $sum товаров
+              Количество товара {totalItems}
             </TextAtom>
             <ST.Basket>
               <ST.Box>
@@ -55,7 +58,7 @@ export default function Basket() {
                   ))}
                 </ST.CardsBox>
               </ST.Box>
-              <PayBlock />
+              <PayBlock totalSumProduct={totalSumProduct} />
             </ST.Basket>
           </>
         ) : (

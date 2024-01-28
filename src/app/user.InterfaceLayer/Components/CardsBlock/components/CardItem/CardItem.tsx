@@ -105,10 +105,10 @@ const CardItem: React.FC<CardItemProps> = ({ product, addToCart }) => {
                 color={Colors.GRAY}
                 $textDecoration="line-through"
               >
-                {actualPrice} ₽
+                {actualPrice.toLocaleString()} ₽
               </TextAtom>
               <TextAtom type={TextEnum.enum_Text_H3} color={Colors.BLACK}>
-                {priceSale} ₽
+                {priceSale.toLocaleString()} ₽
               </TextAtom>
             </ST.Price>
             <ST.Icons>
