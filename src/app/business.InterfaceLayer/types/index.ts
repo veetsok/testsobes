@@ -13,3 +13,9 @@ export interface Products {
   forAdults: boolean;
   forChildren: boolean;
 }
+
+export interface Items extends Products {
+  sumProduct: number;
+  total: number;
+  quantity: number;
+}

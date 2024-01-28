@@ -20,6 +20,9 @@ export default function Basket() {
     useCartStore.getState();
   }, []);
 
+  const addToCart = useCartStore((state) => state.addToCart);
+  const removeItem = useCartStore((state) => state.removeItem);
+
   console.log(items);
 
   return (
@@ -46,6 +49,8 @@ export default function Basket() {
                       key={item.id}
                       item={item}
                       onDelete={() => deleteToCart(item.id)}
+                      addToCart={addToCart}
+                      removeItem={removeItem}
                     />
                   ))}
                 </ST.CardsBox>

@@ -1,6 +1,6 @@
 import React from "react";
 import * as ST from "./styled/styled";
-import { Products } from "@/app/business.InterfaceLayer/types";
+import { Items, Products } from "@/app/business.InterfaceLayer/types";
 import ImageAtom from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Image.atom";
 import ImageEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Image.atom/enum";
 import TextAtom from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Text.atom";
@@ -12,12 +12,22 @@ import PlusIcon from "../../../user.InterfaceLayer/shared/assets/icons/plus.svg?
 import DeleteIcon from "../../../user.InterfaceLayer/shared/assets/icons/delete.svg?react";
 
 interface CardsBoxProps {
-  item?: Products[];
-  onDelete?: () => void;
+  item: Items;
+  onDelete: () => void;
+  addToCart: (product: Products) => void;
+  removeItem: (productId: number) => void;
 }
 
-const CardsBox: React.FC<CardsBoxProps> = ({ item, onDelete }) => {
-  const { title, img } = item;
+const CardsBox: React.FC<CardsBoxProps> = ({ item, onDelete, addToCart, removeItem }) => {
+  const { id, title, img, quantity, sumProduct } = item;
+
+  const handleIncrement = () => {
+    addToCart(item);
+  };
+
+  const handleDecrement = () => {
+    removeItem(id);
+  };
 
   return (
     <ST.Container>
@@ -65,6 +75,7 @@ const CardsBox: React.FC<CardsBoxProps> = ({ item, onDelete }) => {
             type={ImageEnum.enum_defaultSvg}
             fill={Colors.GRAY}
             icon={<MinusIcon />}
+            onClick={handleDecrement}
             cursor="pointer"
           />
           <TextAtom
@@ -74,7 +85,7 @@ const CardsBox: React.FC<CardsBoxProps> = ({ item, onDelete }) => {
             fontWeight="400"
             type={TextEnum.enum_Text_H5}
           >
-            1
+            {quantity}
           </TextAtom>
           <ImageAtom
             $borderRadius="0 5px 5px 0"
@@ -83,12 +94,13 @@ const CardsBox: React.FC<CardsBoxProps> = ({ item, onDelete }) => {
             type={ImageEnum.enum_defaultSvg}
             fill={Colors.GRAY}
             icon={<PlusIcon />}
+            onClick={handleIncrement}
             cursor="pointer"
           />
         </ST.Quantity>
         <ST.PriceBlock>
           <TextAtom color={Colors.BLACK} type={TextEnum.enum_Text_H3}>
-            $ 123 ₽
+            {sumProduct} ₽
           </TextAtom>
           <ImageAtom
             margin="0 43px 0 0"
@@ -102,4 +114,5 @@ const CardsBox: React.FC<CardsBoxProps> = ({ item, onDelete }) => {
     </ST.Container>
   );
 };
+
 export default CardsBox;
