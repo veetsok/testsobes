@@ -14,7 +14,7 @@ export const SliderBlock = styled.div`
   border-radius: 10px;
   position: relative;
   background: radial-gradient(544.32% 83.35% at 75.14% 62.23%, #a6a9ff 0%, #6f73ee 100%);
-  padding: 39px 0 31px;
+  padding: 39px 0 0 0;
   margin: 31px 0 39px;
 `;
 
@@ -45,4 +45,10 @@ export const BoxShield = styled.div`
   position: absolute;
   bottom: 120px;
   left: 547px;
+`;
+
+export const NewText = styled.div`
+  position: absolute;
+  right: 17px;
+  bottom: -20px;
 `;

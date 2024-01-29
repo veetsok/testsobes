@@ -4,13 +4,8 @@ import React from "react";
 import * as ST from "./styled/styled";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Colors from "@/app/user.InterfaceLayer/constants/colors";
-import ImageAtom from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Image.atom";
-import ImageEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Image.atom/enum";
-import ButtonAtom from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom";
-import ButtonEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom/enum";
 
 interface SliderTitleProps {}
 
@@ -33,22 +28,10 @@ const SliderTitle: React.FC<SliderTitleProps> = () => {
     },
   ];
 
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index: number, className: string) {
-      return `<span class="${className}">${index + 1}</span>`;
-    },
-  };
-
   return (
     <>
       <ST.SliderTitle>
-        <Swiper
-          navigation={true}
-          pagination={pagination}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
+        <Swiper autoplay={{ delay: 2000 }} loop speed={2000} className="mySwiper">
           {titles.map((title, index) => (
             <SwiperSlide key={index}>
               <>
@@ -63,18 +46,6 @@ const SliderTitle: React.FC<SliderTitleProps> = () => {
                 <TextAtom type={TextEnum.enum_Text_H4} color={Colors.WHITE}>
                   {title.desc}
                 </TextAtom>
-                <ButtonAtom
-                  width="177px"
-                  $borderRadius="5px"
-                  padding="15px 25px"
-                  margin="25px 0 0 0"
-                  background={Colors.WHITE}
-                  type={ButtonEnum.enum_defaultButton}
-                >
-                  <TextAtom type={TextEnum.enum_Text_H5} color={Colors.PURPLE}>
-                    Перейти в католог
-                  </TextAtom>
-                </ButtonAtom>
               </>
             </SwiperSlide>
           ))}

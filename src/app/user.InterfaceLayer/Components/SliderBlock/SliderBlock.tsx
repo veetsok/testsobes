@@ -35,6 +35,18 @@ const SliderBlock: React.FC<SliderBlockProps> = () => {
                 Новинка
               </TextAtom>
               <SliderTitle />
+              <ButtonAtom
+                width="177px"
+                $borderRadius="5px"
+                padding="15px 25px"
+                margin="25px 0 0 0"
+                background={Colors.WHITE}
+                type={ButtonEnum.enum_defaultButton}
+              >
+                <TextAtom type={TextEnum.enum_Text_H5} color={Colors.PURPLE}>
+                  Перейти в католог
+                </TextAtom>
+              </ButtonAtom>
               <ST.BoxShield>
                 <ImageAtom
                   type={ImageEnum.enum_srcImage}
@@ -51,6 +63,22 @@ const SliderBlock: React.FC<SliderBlockProps> = () => {
                 >
                   Тест-драйв и обучение
                 </TextAtom>
+                <ST.NewText>
+                  <TextAtom
+                    type={TextEnum.enum_Text_H6}
+                    color={Colors.PURPLE}
+                    fontSize="14px"
+                    fontWeight="400"
+                    padding="3px 11px 4px 11px"
+                    background={Colors.WHITE}
+                    width="max-content"
+                    $borderRadius="5px"
+                    border={`1px solid ${Colors.WHITE}`}
+                    textTransform="uppercase"
+                  >
+                    Бесплатно
+                  </TextAtom>
+                </ST.NewText>
               </ST.BoxShield>
             </ST.ContentSlider>
             <ST.ImageSlider>
