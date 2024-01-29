@@ -1,5 +1,3 @@
-"use client";
-
 import { create } from "zustand";
 import { Items, Products } from "../types";
 
@@ -13,7 +11,11 @@ interface CartStore {
 }
 
 export const useCartStore = create<CartStore>((set) => {
-  const initialItems: Items[] = JSON.parse(localStorage.getItem("cartItems") || "[]");
+  // Check if localStorage is available (for server-side rendering)
+  const initialItems: Items[] =
+    typeof window !== "undefined"
+      ? JSON.parse(localStorage.getItem("cartItems") || "[]")
+      : [];
 
   const calculateTotal = (items: Items[]): number => {
     return items.reduce((acc, item) => acc + item.sumProduct, 0);
