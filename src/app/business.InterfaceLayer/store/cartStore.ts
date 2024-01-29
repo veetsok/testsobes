@@ -9,6 +9,7 @@ interface CartStore {
   removeFromCart: (productId: number) => void;
   removeItem: (productId: number) => void;
   clearCart: () => void;
+  total: number;
 }
 
 export const useCartStore = create<CartStore>((set) => {
@@ -20,10 +21,12 @@ export const useCartStore = create<CartStore>((set) => {
 
   return {
     items: initialItems,
+    total: calculateTotal(initialItems),
     addToCart: (product) =>
-      // @ts-ignore
-      set((state) => {
-        const existingItemIndex = state.items.findIndex((item) => item.id === product.id);
+      set((state: any) => {
+        const existingItemIndex = state.items.findIndex(
+          (item: any) => item.id === product.id
+        );
         if (existingItemIndex !== -1) {
           const updatedItems = [...state.items];
           updatedItems[existingItemIndex].quantity += 1;
@@ -36,7 +39,6 @@ export const useCartStore = create<CartStore>((set) => {
             ...state.items,
             { ...product, quantity: 1, sumProduct: product.actualPrice },
           ];
-          // @ts-ignore
           const total = calculateTotal(newItems);
           localStorage.setItem("cartItems", JSON.stringify(newItems));
           return { items: newItems, total };
@@ -58,7 +60,6 @@ export const useCartStore = create<CartStore>((set) => {
           localStorage.setItem("cartItems", JSON.stringify(updatedItems));
           return { items: updatedItems, total };
         } else {
-          // @ts-ignore
           return { items: state.items, total: state.total };
         }
       }),
