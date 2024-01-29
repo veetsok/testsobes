@@ -26,7 +26,7 @@ const PayBlock: React.FC<PayBlockProps> = ({ totalSumProduct }) => {
           Итого
         </TextAtom>
         <TextAtom margin="0 0 11px 0" color={Colors.BLACK} type={TextEnum.enum_Text_H2}>
-          {totalSumProduct} ₽
+          {totalSumProduct.toLocaleString()} ₽
         </TextAtom>
 
         <ST.Cost>
