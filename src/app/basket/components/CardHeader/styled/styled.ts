@@ -19,5 +19,5 @@ export const HeaderBox = styled.div`
 export const HeaderBox2 = styled.div`
   display: flex;
   align-items: center;
-  gap: 57.5px;
+  gap: 95px;
 `;

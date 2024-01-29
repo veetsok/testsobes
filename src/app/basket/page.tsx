@@ -34,7 +34,7 @@ export default function Basket() {
       <ST.Container className={styles.container}>
         <Routing childrenText="Главная / Каталог / Моя корзина" />
         <TextAtom
-          margin="49px 0 40px 0"
+          margin="0 0 40px 0"
           type={TextEnum.enum_Text_H1}
           textTransform="uppercase"
         >

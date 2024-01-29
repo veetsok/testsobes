@@ -95,9 +95,6 @@ const MenuMiddle: React.FC<MenuMiddleProps> = () => {
                 </Space>
               )}
             />
-
-            {/* <ST.MenuSearch type="search" placeholder="Искать самокат KUGO" />
-             */}
           </ST.Search>
           <ST.ShopBox>
             <ImageAtom
