@@ -5,11 +5,11 @@ import { Items, Products } from "../types";
 
 interface CartStore {
   items: Items[];
+  total: number;
   addToCart: (product: Products) => void;
   removeFromCart: (productId: number) => void;
   removeItem: (productId: number) => void;
   clearCart: () => void;
-  total: number;
 }
 
 export const useCartStore = create<CartStore>((set) => {
@@ -19,9 +19,11 @@ export const useCartStore = create<CartStore>((set) => {
     return items.reduce((acc, item) => acc + item.sumProduct, 0);
   };
 
+  const initialTotal = calculateTotal(initialItems);
+
   return {
     items: initialItems,
-    total: calculateTotal(initialItems),
+    total: initialTotal,
     addToCart: (product) =>
       set((state: any) => {
         const existingItemIndex = state.items.findIndex(
