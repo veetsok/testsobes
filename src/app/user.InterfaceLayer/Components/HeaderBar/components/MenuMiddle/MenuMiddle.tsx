@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import * as ST from "./styled/styled";
 import styles from "../../../../../styles/page.module.css";
@@ -15,10 +17,37 @@ import ButtonAtom from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom";
 import ButtonEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom/enum";
 import Link from "next/link";
 import Logo from "@/app/user.InterfaceLayer/UI_KIT/Molecules/Logo/Logo";
+import type { SelectProps } from "antd";
+import { Select, Space } from "antd";
 
 interface MenuMiddleProps {}
 
 const MenuMiddle: React.FC<MenuMiddleProps> = () => {
+  const handleChange = (value: string[]) => {
+    console.log(`Искать самокат KUGO ${value}`);
+  };
+
+  const options: SelectProps["options"] = [
+    {
+      label: "RU",
+      value: "russian",
+      emoji: "ru",
+      desc: "Russian",
+    },
+    {
+      label: "EN",
+      value: "English",
+      emoji: "ru",
+      desc: "English",
+    },
+    {
+      label: "Везде",
+      value: "Везде",
+      emoji: "ru",
+      desc: "Везде",
+    },
+  ];
+
   return (
     <ST.MenuMiddle>
       <div className={styles.container}>
@@ -28,6 +57,8 @@ const MenuMiddle: React.FC<MenuMiddleProps> = () => {
           <ButtonAtom
             padding="8px 18px 9px 15px"
             $borderRadius="5px"
+            margin="0 0 0 35px"
+            height="40px"
             border={`1.5px solid ${Colors.PURPLE}`}
             background={Colors.PURPLE}
             type={ButtonEnum.enum_defaultButton}
@@ -39,7 +70,8 @@ const MenuMiddle: React.FC<MenuMiddleProps> = () => {
             />
             <TextAtom
               margin="0 0 0 13px"
-              type={TextEnum.enum_Text_H4}
+              fontWeight="500"
+              type={TextEnum.enum_Text_H5}
               color={Colors.WHITE}
             >
               Каталог
@@ -47,8 +79,25 @@ const MenuMiddle: React.FC<MenuMiddleProps> = () => {
           </ButtonAtom>
 
           <ST.Search>
-            <ST.MenuSearch type="search" placeholder="Искать самокат KUGO" />
-            <ImageAtom type={ImageEnum.enum_defaultSvg} icon={<SearchIcon />} />
+            <Select
+              className="selectCustom"
+              mode="multiple"
+              style={{ width: "100%" }}
+              placeholder="Искать самокат KUGO"
+              defaultValue={["china"]}
+              onChange={handleChange}
+              optionLabelProp="label"
+              options={options}
+              optionRender={(option) => (
+                <Space>
+                  <span role="img" aria-label={option.data.label}></span>
+                  {option.data.desc}
+                </Space>
+              )}
+            />
+
+            {/* <ST.MenuSearch type="search" placeholder="Искать самокат KUGO" />
+             */}
           </ST.Search>
           <ST.ShopBox>
             <ImageAtom
