@@ -13,6 +13,7 @@ enum Colors {
   BG_BUTTON = "#F4F7FB",
   BG_CARD = "#eaebed",
   ORANGE = "#D77036",
+  BUTTON_BR = "#C4C4C4",
 }
 
 export default Colors;
