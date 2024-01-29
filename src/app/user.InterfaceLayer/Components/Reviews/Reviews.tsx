@@ -20,20 +20,25 @@ const Reviews: React.FC<ReviewsProps> = () => {
           Отзывы и фото реальных покупателей
         </TextAtom>
         <ST.HeadDesc>
-          <TextAtom
-            type={TextEnum.enum_Text_H6}
-            color={Colors.PURPLE}
-            fontSize="14px"
-            fontWeight="400"
+          <a
+            href="https://market.yandex.ru/shop--kugoo-russia/1071730/reviews"
+            target="_blank"
           >
-            Читать отзывы на Яндекс
-          </TextAtom>
-          <ImageAtom
-            margin="0 0 0 11px"
-            type={ImageEnum.enum_defaultSvg}
-            fill={Colors.PURPLE}
-            icon={<ArrowIcon />}
-          />
+            <TextAtom
+              type={TextEnum.enum_Text_H6}
+              color={Colors.PURPLE}
+              fontSize="14px"
+              fontWeight="400"
+            >
+              Читать отзывы на Яндекс
+            </TextAtom>
+            <ImageAtom
+              margin="0 0 0 11px"
+              type={ImageEnum.enum_defaultSvg}
+              fill={Colors.PURPLE}
+              icon={<ArrowIcon />}
+            />
+          </a>
         </ST.HeadDesc>
       </ST.Container>
       <ST.Gallery>
@@ -87,7 +92,7 @@ const Reviews: React.FC<ReviewsProps> = () => {
           type={ImageEnum.enum_srcImage}
           src="../img/rewiew5.jpg"
         />
-         <ImageAtom
+        <ImageAtom
           height="284px"
           width="378px"
           type={ImageEnum.enum_srcImage}

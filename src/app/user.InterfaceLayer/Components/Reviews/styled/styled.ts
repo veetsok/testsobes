@@ -12,11 +12,13 @@ export const Container = styled.div`
 `;
 
 export const HeadDesc = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 57px;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 57px;
+  }
 `;
 
 export const ReviewsWrapper = styled.div`
