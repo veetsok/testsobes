@@ -8,6 +8,7 @@ import TextEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Text.atom/enum";
 import ButtonAtom from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom";
 import ButtonEnum from "@/app/user.InterfaceLayer/UI_KIT/Atoms/Button.atom/enum";
 import Colors from "@/app/user.InterfaceLayer/constants/colors";
+import Link from "next/link";
 
 interface EmptyBlockProps {}
 
@@ -32,9 +33,11 @@ const EmptyBlock: React.FC<EmptyBlockProps> = () => {
         $borderRadius="5px"
         border={`1.3px solid ${Colors.PURPLE}`}
       >
-        <TextAtom type={TextEnum.enum_Text_H6} color={Colors.WHITE}>
-          Перейти в каталог
-        </TextAtom>
+        <Link href="/">
+          <TextAtom type={TextEnum.enum_Text_H6} color={Colors.WHITE}>
+            Перейти в каталог
+          </TextAtom>
+        </Link>
       </ButtonAtom>
     </ST.Container>
   );
